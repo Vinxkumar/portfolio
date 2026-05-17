@@ -3,6 +3,9 @@ import ShapeGrid from "../components/ShapeGrid";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { useState, useEffect } from "react";
+import LoginProfile from "../components/LoginProfile";
+
+
 
 
 
@@ -31,7 +34,7 @@ const [currentTime, setCurrentTime] = useState(new Date());
             speed={0.5}
             squareSize={40}
             direction="diagonal"
-              borderColor={darkMode ? "#2727a" : "#d4d4a8"}
+              borderColor={darkMode ? "#383838" : "#d4d4a8"}
             hoverFillColor={darkMode ? "#222" : "#c8cddf"}
             shape="square"
             hoverTrailAmount={0}
@@ -44,8 +47,8 @@ const [currentTime, setCurrentTime] = useState(new Date());
           animate={{ y: 0, opacity: 1 }}
           className="absolute z-10 top-0 transition-all ease-in-out"
         >
-          <div className={` w-screen h-10 flex items-center justify-between p-2  backdrop-100% border-b shadow-lg
-                ${darkMode ? "bg-[#18181b] text-white border-[#27272a] ": "bg-zinc-100"}
+          <div className={` w-screen h-10 flex items-center justify-between p-2   border-b shadow-lg
+                ${darkMode ? "bg-[#18181b] text-white border-[#27272a] ": " bg-zinc-100 backdrop-blur-sm border-gray-300 text-gray-800"}
             
             `}>
             <motion.span
@@ -87,9 +90,24 @@ const [currentTime, setCurrentTime] = useState(new Date());
           </motion.button>
           </div>
         </motion.div>
-        <div>
-            dwdwdwdwd
-        </div>
+        
+        <motion.div
+            initial={{ z: 0, opacity: 0 }}
+            animate={{ z: 10, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            className={`absolute flex top-2/5 items-center justify-center`}
+        
+        >
+          <LoginProfile darkMode={darkMode}/>
+        </motion.div>
+        <motion.div 
+                    initial={{ z: 0, opacity: 0 }}
+            animate={{ z: 10, opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
+        
+        className="absolute bottom-24 z-10 text-xl transition-all ease-in-out duration-150 animate-bounce">
+            <span className={`animate-pulse ${darkMode? " text-gray-400":"text-black"}`}>click on profile to continue</span>
+        </motion.div>
       </div>
     </>
   );
