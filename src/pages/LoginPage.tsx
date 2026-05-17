@@ -5,12 +5,15 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { useState, useEffect } from "react";
 import LoginProfile from "../components/LoginProfile";
 
+
+// const preloadLogin = () => import("../pages/HomeScreen")
+
 const LoginPage = () => {
   const [darkMode, setDarkMode] = useState(true);
 const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => {
-        const timer = setTimeout(() => {
+        const timer = setInterval(() => {
             setCurrentTime(new Date());
         }, 16);
         return () => clearTimeout(timer);
@@ -45,7 +48,7 @@ const [currentTime, setCurrentTime] = useState(new Date());
           className="absolute z-10 top-0 transition-all ease-in-out"
         >
           <div className={` w-screen h-10 flex items-center justify-between p-2   border-b shadow-lg
-                ${darkMode ? "bg-[#18181b] text-white border-[#27272a] ": " bg-zinc-100 backdrop-blur-sm border-gray-300 text-gray-800"}
+                ${darkMode ? "bg-[#18181b]/70 text-white border-[#27272a] ": " bg-zinc-100/70 backdrop-blur-md border-gray-300 text-gray-800"}
             
             `}>
             <motion.span
