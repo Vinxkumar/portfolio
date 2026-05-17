@@ -5,10 +5,6 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { useState, useEffect } from "react";
 import LoginProfile from "../components/LoginProfile";
 
-
-
-
-
 const LoginPage = () => {
   const [darkMode, setDarkMode] = useState(true);
 const [currentTime, setCurrentTime] = useState(new Date());
@@ -41,6 +37,7 @@ const [currentTime, setCurrentTime] = useState(new Date());
             
           />
         </div>
+        
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           transition={{ duration: 0.8 }}
@@ -103,7 +100,7 @@ const [currentTime, setCurrentTime] = useState(new Date());
         <motion.div 
                     initial={{ z: 0, opacity: 0 }}
             animate={{ z: 10, opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
+            transition={{ delay: 2, duration: 0.5 }}
         
         className="absolute bottom-24 z-10 text-xl transition-all ease-in-out duration-150 animate-bounce">
             <span className={`animate-pulse ${darkMode? " text-gray-400":"text-black"}`}>click on profile to continue</span>
