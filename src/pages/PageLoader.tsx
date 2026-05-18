@@ -1,12 +1,12 @@
-import DotField from "../components/DotField";
-import ShinyText from "../components/ShinyText";
+import DotField from "../components/ui/DotField";
+import ShinyText from "../components/ui/ShinyText";
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react";
 
 
 
 
-const preloadLogin = () => import('../pages/LoginPage')
+const preloadLogin = () => import('./LandingPage')
 
 
 
@@ -17,7 +17,7 @@ const PageLoader = () => {
   useEffect(() => {
     preloadLogin()
 
-    const t = setTimeout(() => navigate('/login'), 4000)
+    const t = setTimeout(() => navigate('/home'), 5000)
     return () => clearTimeout(t)
   }, [])
   return (
@@ -27,7 +27,7 @@ const PageLoader = () => {
         className="flex flex-col items-center justify-center"
       >
         <DotField
-          dotRadius={1}
+          dotRadius={2}
           dotSpacing={14}
           bulgeStrength={43}
           glowRadius={50}
@@ -41,7 +41,7 @@ const PageLoader = () => {
           glowColor="#120F17"
         />
               <ShinyText
-        text="Folio OS"
+        text="init()"
         speed={3.3}
         delay={0}
         color="#4a4949"
