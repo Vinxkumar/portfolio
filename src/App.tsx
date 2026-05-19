@@ -6,15 +6,18 @@ import AboutMe from './pages/AboutMe'
 import './App.css'
 
 const HomeScreenLazy = lazy(() => import("./pages/LandingPage"))
-// const AboutMeScreenLazy = lazy(() => import())
-function App() {
-  const [scrollY, setScrollY] = useState(0);
+const ProjectsScreenLazy = lazy(() => import("./pages/Projects"))
 
-useEffect(() => {
-  const handleScroll = () => setScrollY(window.scrollY);
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+
+
+function App() {
+        const [scrolly, setScrollY] = useState(0);
+  
+    useEffect(() => {
+      const handleScroll = () => setScrollY(window.scrollY);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
   return (
     <>
 
@@ -25,8 +28,13 @@ useEffect(() => {
       <div className="w-screen h-screen flex items-center justify-center bg-[#09090b]"/>
     }>
       <main>
-        <HomeScreenLazy scrollY={scrollY}/>
-        <AboutMe/>
+
+    <HomeScreenLazy scrolly={scrolly}/>
+
+    <ProjectsScreenLazy />
+
+    <AboutMe/>
+
       </main>
     </Suspense>
     }/>
