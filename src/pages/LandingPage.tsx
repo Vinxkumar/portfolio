@@ -18,7 +18,7 @@ const HomePage = ({scrolly} : ScrollPosition) => {
     <>
       <motion.div
 
-      className={`relative w-full min-h-screen flex pt-4  justify-between transition-colors duration-700  bg-[#09090b] overflow-hidden 
+      className={`relative w-full min-h-screen flex pt-4  justify-between transition-colors duration-700  bg-[#0E2D2E] overflow-hidden 
       `}
       >
         <div className="absolute z-10 w-full h-full">
@@ -49,8 +49,8 @@ const HomePage = ({scrolly} : ScrollPosition) => {
   className="absolute right-0 top-24 w-1/2 h-[70%] z-30 overflow-hidden"
 >
   <MetaBalls
-    color="#8b5cf6"
-    cursorBallColor="#8b5cf6"
+    color="#8EDB8F"
+    cursorBallColor="#8EDB8F"
     cursorBallSize={2}
     ballCount={22}
     animationSize={20}
