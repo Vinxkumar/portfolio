@@ -35,7 +35,7 @@ const content = [
               style={{
                 width: "100%",
                 height: "100%",
-                backgroundColor: "#8b5cf6",
+                backgroundColor: "#8EDB8F",
               }}
             >
               <div className="flex flex-col p-5gap-2 items-center justify-center">
@@ -292,7 +292,7 @@ const content = [
               style={{
                 width: "100%",
                 height: "100%",
-                backgroundColor: "#8b5cf6",
+                backgroundColor: "#8EDB8F",
               }}
             >
               <div className="flex flex-col p-5gap-2 items-center justify-center">
@@ -350,7 +350,7 @@ const content = [
                         "_blank",
                       );
                     }}
-                    className="bg-[#0d1117] flex gap-2 items-center justify-center text-white mt-25 w-15 h-8 rounded-xl shadow-2xl cursor-pointer"
+                    className="bg-[#8EDB8F] flex gap-2 items-center justify-center text-white mt-25 w-15 h-8 rounded-xl shadow-2xl cursor-pointer"
                   >
                     <FaGithub className="rounded-full" />
                   </button>
@@ -374,9 +374,11 @@ const content = [
 const ProjectCard = () => {
   return (
   
-  <div className="absolute w-full h-full"><StickyScroll content={content} /></div>  
+    <div className="absolute w-full h-full" style={{ backgroundColor: "#8EDB8F" }}>
+      <StickyScroll content={content} />
+    </div>
   )
-
 }
+
 
 export default ProjectCard
