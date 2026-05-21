@@ -21,12 +21,12 @@ const LandingPage = () => {
               delay: 1.1,
               duration: 0.5,
             }}
-            className="mt-9 ml-8 h-0.5 w-18 rounded-full left-0 bottom-1 bg-[#8b5cf6] "
+            className="mt-9 ml-8 h-0.5 w-18 rounded-full left-0 bottom-1 bg-[#8EDB8F] "
           />
 
 
           {/* profession */}
-          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#8b5cf6]">
+          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#8EDB8F]">
             <BlurText
               text="FULL STACK DEVELOPER"
               delay={200}
@@ -72,7 +72,7 @@ const LandingPage = () => {
             />
             <SplitText
               text=" Actually"
-              className=" text-center  text-[#8b5cf6]"
+              className=" text-center  text-[#8EDB8F]"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -98,7 +98,7 @@ const LandingPage = () => {
       rotationInterval={2000}
       auto
       loop
-      className="bg-[#8b5cf6] transition-transform ease-in-out rounded-2xl translate-x-1"
+      className="bg-[#8EDB8F] transition-transform ease-in-out rounded-2xl translate-x-1"
     />
   </motion.div>
           </div>
