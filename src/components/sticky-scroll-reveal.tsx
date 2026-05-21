@@ -102,7 +102,7 @@ const linearGradients = [
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-         "sticky top-10 hidden h-[60vh] w-[40%] overflow-hidden rounded-2xl lg:flex items-center justify-center",
+         "sticky top-10 hidden h-[60vh] w-[40%] overflow-hidden rounded-2xl lg:flex items-center justify-center bg-[#8EDB8F] shadow-[0_0_40px_rgba(139,92,246,0.3)]",
           contentClassName
         )}
       >
