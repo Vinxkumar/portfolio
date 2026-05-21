@@ -7,7 +7,7 @@ import './App.css'
 
 const HomeScreenLazy = lazy(() => import("./pages/LandingPage"))
 const ProjectsScreenLazy = lazy(() => import("./pages/Projects"))
-
+const Patents = lazy(() => import("./pages/Patents"))
 
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
 
     <ProjectsScreenLazy />
 
+    <Patents/>
     <AboutMe/>
 
       </main>
