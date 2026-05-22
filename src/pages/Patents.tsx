@@ -4,7 +4,7 @@ import SmartMotionPreview from "../assets/SmartMotionPreview.png"
 const Patents = () => {
   return (
     <>
-      <div className="relative z-10 py-18  min-w-screen min-h-screen bg-[#09090b] text-white border-t border-[#2d1f5e] ">
+      <div className="relative z-10 py-18  min-w-screen min-h-screen bg-[#09090b] text-white border-t border-[#2d1f5e] overflow-hidden ">
         <div className="absolute z-10 flex gap-2">
           <motion.div
             initial={{ z: -100, opacity: 0 }}
