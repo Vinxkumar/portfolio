@@ -25,9 +25,9 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
 
   className="fixed z-30 top-0 left-0 w-full flex justify-center"
 >
-  <div className={`flex items-center justify-between p-2 border-b shadow-lg bg-[#18181b]/70 text-white border-[#27272a] backdrop-blur-lg transition-all duration-300 ease-in-out
+  <div className={`flex items-center justify-between p-2  bg-[#0E2D2E]/50 border-b-2 border-[#8edb8f] shadow-lg b text-white  backdrop-blur-lg transition-all duration-300 ease-in-out
           ${scrolly > 25
-      ? "mt-2 rounded-3xl w-[80%]"
+      ? "mt-2.5 pl-4 rounded-2xl w-[80%] border-b-2 border-b-[#8edb8f]"
       : "w-full rounded-none"
     }
   `}>
@@ -60,33 +60,7 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
             >
 
 
-            <div className=" flex  ">
-              <motion.button 
-                            initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`group cursor-pointer text-gray-400 hover:text-gray-200 hover:scale-130 transition-all ease-in-out`}>
-              <Shuffle
-              text="projects"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className=" text-md"
-              />
-            
-              </motion.button>
-              
-            </div>    
+ 
 
 
 
@@ -119,7 +93,33 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
               
             </div>
 
+                        <div className=" flex  ">
+              <motion.button 
+                            initial={{ z: 0, opacity: 0 }}
+              animate={{ z: 10, opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className={`group cursor-pointer text-gray-400 hover:text-gray-200 hover:scale-130 transition-all ease-in-out`}>
+              <Shuffle
+              text="projects"
+              shuffleDirection="up"
+              duration={0.35}
+              animationMode="evenodd"
+              shuffleTimes={3}
+              ease="power3.out"
+              stagger={0.03}
+              threshold={0.1}
+              triggerOnce={true}
+              triggerOnHover
+              respectReducedMotion={true}
+              loop={false}
+              loopDelay={0}
+              className=" text-md"
+              />
             
+              </motion.button>
+              
+            </div>   
 
             <div className="flex ">
               <motion.button 
