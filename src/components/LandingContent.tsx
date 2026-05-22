@@ -12,7 +12,7 @@ const LandingPage = () => {
     <>
       <div className="absolute w-full h-full flex flex-col m-1  justify-start text-white ">
 
-        {/*  Horizontal br  */}
+        {/*  Nav Bar */}
         <div className=" flex gap-2">
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -25,7 +25,6 @@ const LandingPage = () => {
           />
 
 
-          {/* profession */}
           <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#8EDB8F]">
             <BlurText
               text="FULL STACK DEVELOPER"
@@ -37,7 +36,7 @@ const LandingPage = () => {
         </div>
 
 
-            {/*  Bilding things what actually works */}
+        
         <div className="mt-6 ml-8 gap-1 felx flex-col text-8xl font-semibold font-poppins">
           <div className="">
             <SplitText
