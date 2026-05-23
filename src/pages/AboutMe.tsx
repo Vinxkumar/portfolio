@@ -163,10 +163,7 @@ const AboutMe = () => {
 
           <div className="absolute right-8 w-131 items-center justify-between h-118 flex flex-col">
             
-            <div className="w-full h-[50%] border">
-              <FrontendSkills/>
-            </div>
-            <div className="w-full h-[50%] border">
+            <div className="w-full h-full ">
               <FrontendSkills/>
             </div>
           </div>
