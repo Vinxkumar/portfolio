@@ -1,4 +1,4 @@
-
+import {motion} from "framer-motion"
 
 type skillSize = 1 | 2 | 3
 
@@ -58,16 +58,32 @@ const skills: skill[] = [
 
 ]
 
-const FrontendSkills = () => {
+const Skills = () => {
 
     return (
         <>
-            <div className="relative w-full h-full items-center justify-center">
-                
-            </div>
+            <motion.div 
+            initial={{y:-100, opacity:0}}
+            whileInView={{y:0, opacity:1}}
+            transition={{
+
+            }}
+            className="relative w-full h-full items-center justify-center">
+                {skills.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{}}
+                        animate={{y:[0, -10, 0], opacity:1}}
+                        transition={{repeat:Infinity, duration:skill.dur, delay:skill.delay}}
+                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border text-[#8edb8f] border-black bg-[#0e2d2e]"
+                            style={{ top: skill.top, right: skill.right }}
+                        >{skill.name}</motion.div>
+                    ))
+                }
+            </motion.div>
         </>
     )
 }
 
-export default FrontendSkills
+export default Skills
 
