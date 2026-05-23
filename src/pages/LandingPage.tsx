@@ -1,6 +1,5 @@
 import { motion} from "motion/react";
 import ShapeGrid from "../components/ui/ShapeGrid";
-import { useState } from "react";
 import HomeNav from "../components/HomeNavBar";
 import LandingPage from "../components/LandingContent"
 import MetaBalls from "../components/ui/MetalBalls";
@@ -12,7 +11,7 @@ type ScrollPosition = {
 // const preloadLogin = () => import("../pages/HomeScreen")
 
 const HomePage = ({scrolly} : ScrollPosition) => {
-  const [darkMode, setDarkMode] = useState(true);
+
 
   return (
     <>
@@ -68,7 +67,7 @@ const HomePage = ({scrolly} : ScrollPosition) => {
             transition={{ delay: 2, duration: 0.5 }}
         
         className="absolute left-1/2 bottom-24 z-10 text-xl transition-all ease-in-out duration-150 animate-bounce">
-            <span className={`animate-pulse ${darkMode? " text-gray-400":"text-black"} h-0.5 w-1 items-center justify-center  rounded-full bg-white`}>.</span>
+            <span className={`animate-pulse h-0.5 w-1 items-center justify-center  rounded-full bg-white`}>.</span>
             
         </motion.div>
       </motion.div>
