@@ -22,9 +22,9 @@ const skills: skill[] = [
 
 { name: "tailwindCSS",size: 3, top: "18%", right: "58%", dur: 1.9, delay: 2.1 },
 
-{ name: "Vite",size: 3, top: "25%", right: "40%", dur: 2.2, delay: 1.0 },
+{ name: "Vite",size: 3, top: "28%", right: "43%", dur: 2.2, delay: 1.0 },
 
-{ name: "GitHub",size: 3, top: "30%", right: "55%", dur: 1.7, delay: 2.6 },
+{ name: "GitHub",size: 3, top: "30%", right: "70%", dur: 1.7, delay: 2.6 },
 
 { name: "Git",size: 3, top: "33%", right: "30%", dur: 2.5, delay: 0.5 },
 
@@ -63,11 +63,12 @@ const Skills = () => {
     return (
         <>
             <motion.div 
-            initial={{y:-100, opacity:0}}
+            initial={{y:100, opacity:0}}
             whileInView={{y:0, opacity:1}}
             transition={{
-
+                delay: 1.5, duration:1.2
             }}
+            viewport={{once:true}}
             className="relative w-full h-full items-center justify-center">
                 {skills.map((skill, index) => (
                     <motion.div
@@ -75,7 +76,7 @@ const Skills = () => {
                         initial={{}}
                         animate={{y:[0, -10, 0], opacity:1}}
                         transition={{repeat:Infinity, duration:skill.dur, delay:skill.delay}}
-                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border text-[#8edb8f] border-black bg-[#0e2d2e]"
+                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border text-[#eee8d8] border-[#c8bfa8] bg-[#c05c40] transition-all ease-in-out hover:scale-110 "
                             style={{ top: skill.top, right: skill.right }}
                         >{skill.name}</motion.div>
                     ))
