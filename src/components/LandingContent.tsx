@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const LandingPage = () => {
   return (
     <>
-      <div className="absolute w-full h-full flex flex-col m-1  justify-start text-white ">
+      <div className="absolute w-full h-full flex flex-col m-1  justify-start text-[#eee8d8] ">
 
         {/*  Nav Bar */}
         <div className=" flex gap-2">
@@ -21,11 +21,11 @@ const LandingPage = () => {
               delay: 1.1,
               duration: 0.5,
             }}
-            className="mt-9 ml-8 h-0.5 w-18 rounded-full left-0 bottom-1 bg-[#8EDB8F] "
+            className="mt-9 ml-8 h-0.5 w-18 rounded-full left-0 bottom-1 bg-[#c05c40] "
           />
 
 
-          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#8EDB8F]">
+          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#c05c40]">
             <BlurText
               text="FULL STACK DEVELOPER"
               delay={200}
@@ -71,7 +71,7 @@ const LandingPage = () => {
             />
             <SplitText
               text=" Actually"
-              className=" text-center  text-[#8EDB8F]"
+              className=" text-center  text-[#c05c40]"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -97,7 +97,7 @@ const LandingPage = () => {
       rotationInterval={2000}
       auto
       loop
-      className="bg-[#8EDB8F] transition-transform ease-in-out rounded-2xl translate-x-1"
+      className="bg-[#c05c40] transition-transform ease-in-out rounded-2xl translate-x-1"
     />
   </motion.div>
           </div>
