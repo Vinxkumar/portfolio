@@ -118,15 +118,26 @@ const AboutMe = () => {
         </motion.div>
       </div>
 
-          <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
-  <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-[#c05c40]">
-    <img
-      src={profilePic}
-      alt="Vinod Kumar S"
-      className="w-full h-full object-cover object-top"
-    />
-  </div>
-</div>
+      <motion.div 
+      initial={{y:100, opacity:0}}
+      whileInView={{y:0, opacity:1}}
+      viewport={{once: true}}
+      transition={{
+        delay:0.8, duration:0.8, ease:"easeInOut"
+      }}
+      className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all ease-in-out flex items-center justify-center">
+        <motion.div 
+        initial={{}}
+        whileInView={{y:[0,-10,0], opacity:1}}
+        transition={{repeat:Infinity, delay:1.9, duration:1.9,ease:"easeInOut"}}
+        className="w-64 h-64 rounded-full overflow-hidden border-4 transition-all ease-in-out border-[#c05c40]">
+          <img
+            src={profilePic}
+            alt="Vinod Kumar S"
+            className="w-full h-full object-cover object-top"
+          />
+        </motion.div>
+      </motion.div>
 
       <div className=""></div>
       <div className="flex items-center w-110  justify-center   h-[73%]">
