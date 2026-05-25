@@ -23,7 +23,7 @@ const PageLoader = () => {
   return (
     <div className="w-screen h-screen flex  items-center justify-center bg-[#120F17]">
       <div
-        style={{ width: "100%", height: "600px", position: "relative" }}
+        style={{ width: "100%", height: "100%", position: "relative" }}
         className="flex flex-col items-center justify-center"
       >
         <DotField
