@@ -80,7 +80,7 @@ const ProjectCard = () => {
 
   return (
     <>
-      <div className="relative  gap-3 flex  w-full h-full text-[#8edb8f]">
+      <div className="relative  gap-3 flex  w-full h-full text-[#eee8d8]">
         {projects.map((project, indx) => (
           <motion.div
             key={indx}
@@ -108,14 +108,14 @@ const ProjectCard = () => {
                 scale: { duration: 0.2 },
                 boxShadow: { duration: 0.2 },
               }}
-              className=" group flex flex-col w-full h-[90%] m-1 cursor-pointer items-start rounded-xl pt-4 pl-2 font-poppins font-semibold text-[#0a1628] bg-[#8edb8f] hover:text-[#8edb8f] hover:bg-[#0a1628] overflow-hidden"
+              className=" group flex flex-col w-full h-[90%] m-1 cursor-pointer items-start border border-[#3a3a3a] rounded-xl pt-4 pl-2 font-poppins font-semibold text-[#eee8d8] bg-[#2c2c2c] hover:text-[#2c2c2c] hover:bg-[#eee8d8] overflow-hidden"
             >
               <motion.h2
               viewport={{once:true}}
               className="relative group w-full h-5 flex flex-col">
-                <span className="group font-bold text-md w-fit  h-fit ">
+                <span className="group font-bold text-md text-[#e8805e] group-hover:text-[#2c2c2c] w-fit  h-fit ">
                   {project.title}
-                  <motion.div className="absolute rounded-full mt-0.5 left-0 origin-left scale-x-0 h-[2px] w-full transition-transform ease-in-out duration-500 delay-75 bg-[#8edb8f] group-hover:scale-x-100" />
+                  <motion.div className="absolute rounded-full mt-0.5 left-0 origin-left scale-x-0 h-[2px] w-full transition-transform ease-in-out duration-500 delay-75 bg-[#e8805e] group-hover:scale-x-100 group-hover: text-[#2c2c2c]" />
                 </span>
                 <span className="font-light mt-[4%] text-muted-[#2a3f5f] ">{project.description}</span>
 
@@ -123,7 +123,7 @@ const ProjectCard = () => {
                   {project.tech.map((stack, indx) => (
                     <span 
                     key={indx}
-                    className=" pl-1 pr-1 text-sm w-fit text-[#8edb8f] h-fit rounded-3xl hover:border group-hover:border-[#2a3f5f] group-hover:text-[#0a1628] group-hover:bg-[#4ade80]">{stack}</span>
+                    className=" pl-1 pr-1 text-sm w-fit text-[#2c2c2c] h-fit rounded-3xl hover:border group-hover:border-[#c8bfa8] group-hover:text-[#eee8d8] group-hover:bg-[#c05c40]">{stack}</span>
                   ))}
                 </div>
 
