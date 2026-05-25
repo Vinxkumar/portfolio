@@ -6,17 +6,16 @@ import LinkedInButton from "../components/LinkedInButton";
 import MailButton from "../components/MailButton";
 import ResumeButton from "../components/ResumeButton";
 import TextType from "../components/ui/TextType";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
 import FrontendSkills from "../components/FrontendSkills";
-import profilePic from "../assets/profilepic.png"
+import profilePic from "../assets/profilepic.png";
 const AboutMe = () => {
   return (
-     <div
+    <div
       id="about"
       className="relative flex items-center justify-between px-16 z-10 bg-[#eee8d8] w-screen h-screen overflow-hidden"
     >
-
       {/* <div className="absolute left-4 top-18 flex flex-col items-start w-36">
         <BlurText
           text="AboutMe"
@@ -33,7 +32,6 @@ const AboutMe = () => {
           className="absolute -bottom-1 h-0.5 w-full origin-left rounded-full bg-[#c05c40]"
         />
       </div> */}
-
 
       <div className=" flex flex-col mt-[5%] h-4/5  items-start justify-center gap-5 w-2/5">
         <TextType
@@ -77,17 +75,22 @@ const AboutMe = () => {
           rootMargin="-100px"
           textAlign="left"
         />
-        <motion.div 
-                      initial={{ y: 24, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                delay:0.8, duration:0.8
-              }}
-        className="bg-[#ddd6c4] p-4 text-[#5a5248] border h-1/2 rounded-2xl w-[70%]">
- I'm a final-year BCA student at New Horizon College passionate about building clean, scalable software. I enjoy working across the full stack — from designing APIs in Spring Boot to crafting smooth UIs in React. I thrive on turning complex problems into simple, elegant solutions.
-            </motion.div>
-            
+        <motion.div
+          initial={{ y: 24, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.8,
+            duration: 0.8,
+          }}
+          className="bg-[#ddd6c4] p-4 text-[#5a5248] border h-1/2 rounded-2xl w-[70%]"
+        >
+          I'm a final-year BCA student at New Horizon College passionate about
+          building clean, scalable software. I enjoy working across the full
+          stack — from designing APIs in Spring Boot to crafting smooth UIs in
+          React. I thrive on turning complex problems into simple, elegant
+          solutions.
+        </motion.div>
 
         <div className="flex items-center gap-6 mt-1">
           {[GitHubButton, LinkedInButton, MailButton].map((Btn, i) => (
@@ -129,10 +132,8 @@ const AboutMe = () => {
       <div className="flex items-center w-110  justify-center   h-[73%]">
         <FrontendSkills />
       </div>
-
     </div>
   );
-
 };
 
 export default AboutMe;
