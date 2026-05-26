@@ -1,6 +1,3 @@
-import DotField from "../components/ui/DotField";
-import BlurText from "../components/ui/BlurText";
-import ShapeGrid from "../components/ui/ShapeGrid";
 import GitHubButton from "../components/GitHubButton";
 import LinkedInButton from "../components/LinkedInButton";
 import MailButton from "../components/MailButton";
