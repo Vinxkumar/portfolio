@@ -9,7 +9,7 @@ import autoattend from "../assets/autoAttendance.png";
 // import docCare from "../assets/DocCare.png"
 
 import type { projectProp } from "../types/project";
-import GitHubButton from "./GitHubButton";
+
 const ProjectCard = () => {
   const projects: projectProp[] = [
     {
