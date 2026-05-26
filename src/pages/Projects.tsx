@@ -1,7 +1,7 @@
 import ProjectCard from "../components/ProjectCards"
 import { motion } from "framer-motion"
 import BlurText from "../components/ui/BlurText"
-import DotField from "../components/ui/DotField"
+
 
 const Projects = () => {
 
@@ -31,9 +31,6 @@ const Projects = () => {
           <div className="absolute w-[95%] mt-[8%] h-[75%] text-[#8edb8f]">
           <ProjectCard/>
         </div>
-
-
-
         </div>
         </>
     )
