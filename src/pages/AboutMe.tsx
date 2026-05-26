@@ -1,12 +1,9 @@
-import DotField from "../components/ui/DotField";
-import BlurText from "../components/ui/BlurText";
-import ShapeGrid from "../components/ui/ShapeGrid";
 import GitHubButton from "../components/GitHubButton";
 import LinkedInButton from "../components/LinkedInButton";
 import MailButton from "../components/MailButton";
 import ResumeButton from "../components/ResumeButton";
 import TextType from "../components/ui/TextType";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
 import FrontendSkills from "../components/FrontendSkills";
 import profilePic from "../assets/profilepic.png";

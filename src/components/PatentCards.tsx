@@ -36,7 +36,7 @@ const PatentsCards = () => {
             <h2 className="absolute font-bold pl-4 pr-4 flex gap-12 justify-between w-full text-md top-[5%] text-[#e8805e] group-hover:text-[#c05c40] ">
               SMART MOTION INDICATOR HELMET <FaExternalLinkAlt />
             </h2>
-            <div className="absolute -bottom-0.5 top-[12%] left-0 origin-left scale-x-0 h-[2px] w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
+            <div className="absolute -bottom-0.5 top-[12%] left-0 origin-left scale-x-0 h-0.5 w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
             <img
               src={SmartMotionPreview}
               alt="no image"
@@ -73,7 +73,7 @@ const PatentsCards = () => {
             <h2 className="absolute font-bold pl-4 pr-4 flex gap-12 justify-between w-full text-md top-[5%] text-[#e8805e] group-hover:text-[#c05c40] ">
               DELETED FILE PREVIEW SYSTEM <FaExternalLinkAlt />
             </h2>
-            <div className="absolute -bottom-0.5 top-[12%] left-0 origin-left scale-x-0 h-[2px] w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
+            <div className="absolute -bottom-0.5 top-[12%] left-0 origin-left scale-x-0 h-0.5 w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
             <img
               src={deletedFilePreview}
               alt="no image"
