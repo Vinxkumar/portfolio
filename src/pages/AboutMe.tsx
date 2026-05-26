@@ -3,7 +3,7 @@ import LinkedInButton from "../components/LinkedInButton";
 import MailButton from "../components/MailButton";
 import ResumeButton from "../components/ResumeButton";
 import TextType from "../components/ui/TextType";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
 import FrontendSkills from "../components/FrontendSkills";
 import profilePic from "../assets/profilepic.png";

@@ -1,21 +1,13 @@
 import Shuffle from './ui/Shuffle';
 import {motion} from "framer-motion"
-import { useState, useEffect } from 'react';
+
 type ScrollPosition = {
   scrolly: number;
 };
 
 
 const HomeNav = ({scrolly}: ScrollPosition) => {
-    //   const [scrolly, setScrollY] = useState(0);
-  
-    // useEffect(() => {
-    //   const handleScroll = () => setScrollY(window.scrollY);
-    //   window.addEventListener("scroll", handleScroll);
-    //   return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
-    // const navWidth = useTransform(scrollY, [0, 100], ['100%', '80%'])
-    // const navPadding = useTransform(scrollY, [0, 100], ['0px', '16px'])
+
     return (
         <>
 <motion.div

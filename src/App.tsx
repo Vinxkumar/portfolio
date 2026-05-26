@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import PageLoader from "./pages/PageLoader";
-import ClickSpark from "./components/ui/ClickSpark";
 import { useState, useEffect } from "react";
 import AboutMe from "./pages/AboutMe";
 import "./App.css";
