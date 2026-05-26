@@ -132,7 +132,7 @@ const ProjectCard = () => {
             <h2 className="font-bold flex gap-12 justify-between w-full text-md top-[0%] text-[#e8805e] group-hover:text-[#c05c40] ">
               {project.title} <FaGithub/>
             </h2>
-            <div className="absolute -bottom-0.5 left-0 origin-left scale-x-0 h-[2px] w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
+            <div className="absolute -bottom-0.5 left-0 origin-left scale-x-0 h-0.5 w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
           </div>
           <p className="text-sm font-light text-transparent group-hover:text-[#2c2c2c]">
             {project.description}
