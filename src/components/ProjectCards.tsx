@@ -1,10 +1,15 @@
-import { easeInOut, motion } from "framer-motion";
-import portfolio from "../assets/portfolio.png";
-import BlockChain from "../assets/BlockChain.png";
-import PixelTransition from "./ui/PixelTransition";
-import { MdHistoryToggleOff } from "react-icons/md";
+import { motion } from "framer-motion";
+
 import { FaGithub } from "react-icons/fa6";
+
+import blockchain from "../assets/BlockChain.png";
+import portfolio from "../assets/portfolio.png";
+import autoattend from "../assets/autoAttendance.png";
+// import visionCaption from "../assets/visionCaption.png"
+// import docCare from "../assets/DocCare.png"
+
 import type { projectProp } from "../types/project";
+import GitHubButton from "./GitHubButton";
 const ProjectCard = () => {
   const projects: projectProp[] = [
     {
@@ -21,6 +26,7 @@ const ProjectCard = () => {
       ],
       status: "complete",
       link: "http://github.com/Vinxkumar/Blockchain-Based-Voting-System",
+      img: blockchain,
       top: "0%",
       left: "0%",
       delay: 0.1,
@@ -32,9 +38,10 @@ const ProjectCard = () => {
       tech: ["React", "TailwindCSS", "TypeScript", "Framer-Motion"],
       status: "complete",
       link: "https://github.com/Vinxkumar/portfolio",
+      img: portfolio,
       top: "0%",
       left: "33.34%",
-      delay: 0.3,
+      delay: 0.7,
     },
     {
       title: "VisionCaption",
@@ -45,7 +52,7 @@ const ProjectCard = () => {
       link: "https://github.com/Vinxkumar/VisionCaption",
       top: "0%",
       left: "66.68%",
-      delay: 0.5,
+      delay: 0.4,
     },
     {
       title: "Doc@Care",
@@ -59,79 +66,95 @@ const ProjectCard = () => {
         "SpringBoot",
         "Java",
       ],
+      
       status: "ongoing",
       link: "https://github.com/Vinxkumar/Hospital-CRM",
       top: "50%",
       left: "0%",
-      delay: 0.7,
+      delay: 0.2,
     },
     {
       title: "AutoAttendance",
       description:
         "An automated attendance tracking system that streamlines student attendance management with real-time updates and reporting for teachers",
-      tech: ["React", "TailwindCSS", "TypeScript", "Vite", "Express.js"],
+      tech: ["React", "TailwindCSS", "TypeScript", "Vite", "Flask", "python"],
       status: "ongoing",
-      link: "",
+      img: autoattend,
+      link: "https://auto-attendance-three.vercel.app/",
       top: "50%",
       left: "33.34%",
-      delay: 0.9,
+      delay: 0.5,
     },
   ];
 
   return (
     <>
-      <div className="relative  gap-3 flex  w-full h-full text-[#eee8d8]">
-        {projects.map((project, indx) => (
-          <motion.div
-            key={indx}
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{once:true}}
-            transition={{
-              delay: project.delay,
-              duration: 0.5,
-            }}
-            className="absolute flex m-2  items-center  rounded-3xl justify-between w-[33%] h-[50%]"
-            style={{
-              top: project.top,
-              left: project.left,
-            }}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5, y: 100 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
-              // viewport={{once:true}}
-              transition={{
-                default: { duration: 1, delay: 0.6 },
-                scale: { duration: 0.2 },
-                boxShadow: { duration: 0.2 },
-              }}
-              className=" group flex flex-col w-full h-[90%] m-1 cursor-pointer items-start border border-[#3a3a3a] rounded-xl pt-4 pl-2 font-poppins font-semibold text-[#eee8d8] bg-[#2c2c2c] hover:text-[#2c2c2c] hover:bg-[#eee8d8] overflow-hidden"
-            >
-              <motion.h2
-              viewport={{once:true}}
-              className="relative group w-full h-5 flex flex-col">
-                <span className="group font-bold text-md text-[#e8805e] group-hover:text-[#2c2c2c] w-fit  h-fit ">
-                  {project.title}
-                  <motion.div className="absolute rounded-full mt-0.5 left-0 origin-left scale-x-0 h-[2px] w-full transition-transform ease-in-out duration-500 delay-75 bg-[#e8805e] group-hover:scale-x-100 group-hover: text-[#2c2c2c]" />
-                </span>
-                <span className="font-light mt-[4%] text-muted-[#2a3f5f] ">{project.description}</span>
+      <div className="relative gap-3 flex w-full h-full text-[#eee8d8]">
+  {projects.map((project, indx) => (
+    <motion.div
+      key={indx}
+      initial={{ y: 100 }}
+      animate={{ y: [0, 10, 5, 0], x: [0, 10, 5, 0],  opacity: 1 }}
+      transition={{
+        delay: project.delay,
+        duration: 2.9,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      onClick={()=> window.open(project.link, "_blank")}
+      className="absolute flex  items-center transition-all rounded-3xl  justify-between w-[33%] h-[50%]"
+      style={{ top: project.top, left: project.left }}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5, y: 100 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.03 }}
+        transition={{
+          default: { duration: 1, delay: 0.6 },
+          scale: { duration: 0.2 },
+        }}
+        className="group relative flex flex-col w-full h-[90%] m-1 cursor-pointer border border-[#3a3a3a] rounded-xl overflow-hidden font-poppins bg-[#2c2c2c] hover:bg-[#eee8d8]"
+      >
 
-                <div className="flex flex-wrap gap-2 items-stretch">
-                  {project.tech.map((stack, indx) => (
-                    <span 
-                    key={indx}
-                    className=" pl-1 pr-1 text-sm w-fit text-[#2c2c2c] h-fit rounded-3xl hover:border group-hover:border-[#c8bfa8] group-hover:text-[#eee8d8] group-hover:bg-[#c05c40]">{stack}</span>
-                  ))}
-                </div>
+        <img
+          src={project.img}
+          alt={project.title}
+          className="absolute inset-0 w-full h-[90%] top-[20%] object-cover transition-opacity duration-300 group-hover:opacity-0 z-0"
+        />
 
-              </motion.h2>
-            </motion.div>
-          </motion.div>
-        ))}
-      </div>
+        <div className="absolute inset-0  group-hover:opacity-0 transition-opacity duration-300 z-10" />
+
+        <div className="relative z-20 flex flex-col h-full p-4 gap-2">
+          
+
+          <div className="relative w-full">
+            <h2 className="font-bold flex gap-12 justify-between w-full text-md top-[0%] text-[#e8805e] group-hover:text-[#c05c40] ">
+              {project.title} <FaGithub/>
+            </h2>
+            <div className="absolute -bottom-0.5 left-0 origin-left scale-x-0 h-[2px] w-full rounded-full bg-[#e8805e] transition-transform duration-500 delay-75 group-hover:scale-x-100" />
+          </div>
+          <p className="text-sm font-light text-transparent group-hover:text-[#2c2c2c]">
+            {project.description}
+          </p>
+
+
+          <div className="flex flex-wrap gap-2 mt-auto">
+            {project.tech.map((stack, i) => (
+              <span
+                key={i}
+                className="px-2 py-0.5 text-xs rounded-3xl border border-transparent text-transparent group-hover:border-[#c8bfa8] group-hover:text-[#eee8d8] group-hover:bg-[#c05c40]"
+              >
+                {stack}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </motion.div>
+    </motion.div>
+  ))}
+</div>
     </>
   );
 };
