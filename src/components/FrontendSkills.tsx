@@ -132,23 +132,19 @@ const Skills = () => {
     return (
         <>
             <motion.div 
-            initial={{y:100, opacity:0}}
-            whileInView={{y:0, opacity:1}}
-            transition={{
-                delay: 1.5, duration:1.2
-            }}
-            viewport={{once:true}}
+
             className="relative w-full h-full items-center justify-center">
                 {skills.map((skill, index) => (
                     <motion.div
                         key={index}
-                        initial={{}}
-                        animate={{y:[0, -10, 0], opacity:1}}
-                        transition={{repeat:Infinity, duration:skill.dur, delay:skill.delay}}
-                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border  border-[#c8bfa8] bg-[#c05c40] transition-all ease-in-out hover:scale-110 "
+                        initial={{y:100, opacity:0}}
+                        whileInView={{y:0, opacity:1}}
+                        viewport={{once:true}}
+                        transition={{duration:0.5, delay:skill.delay * 0.3}}
+                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border transition-transform ease-linear duration-75 border-[#c8bfa8] bg-[#c05c40] hover:rotate-6 hover:scale-110 "
                             style={{ top: skill.top, right: skill.right, background: skill.bg, color:skill.color }}
                         >
-                            <a href={skill.link? skill.link : ""} className="flex text-sm gap-2 items-center justify-center w-full h-full" >
+                            <a href={skill.link? skill.link : "/blank"} className="flex text-sm gap-2 items-center justify-center w-full h-full " >
                             {(() => { const Icon = skill.icon as IconType; return Icon ? <Icon size={14}/> : null })()} {skill.name} </a>
                         </motion.div>
                     ))
