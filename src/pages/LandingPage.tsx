@@ -1,5 +1,5 @@
 import { motion} from "motion/react";
-import ShapeGrid from "../components/ui/ShapeGrid";
+
 import HomeNav from "../components/HomeNavBar";
 import LandingPage from "../components/LandingContent"
 import MetaBalls from "../components/ui/MetalBalls";
