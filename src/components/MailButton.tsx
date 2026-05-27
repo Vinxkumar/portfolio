@@ -3,9 +3,14 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const MailButton = () => {
     return (
-        <button className="w-full h-ful cursor-ponter" onClick={()=> window.open("vinxkumar178@gmail.com")}>
-            <BiLogoGmail className="w-full h-full"/>
-        </button>
+<a 
+  href="vinxkumar178@gmail.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="w-full h-full flex items-center justify-center"
+>
+  <BiLogoGmail className="w-full h-full" />
+</a>
     )
 }
 

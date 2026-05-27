@@ -3,9 +3,14 @@ import { LuLinkedin } from "react-icons/lu";
 
 const LinkedInButton = () => {
     return (
-        <button className="w-full h-full cursor-pointer" onClick={()=> window.open("https://www.linkedin.com/in/vinod-kumar-s-/")}>
-            <LuLinkedin className="w-full h-full"/>
-        </button>
+<a 
+  href="https://www.linkedin.com/in/vinod-kumar-s-/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="w-full h-full flex items-center justify-center"
+>
+  <LuLinkedin className="w-full h-full" />
+</a>
     )
 }
 
