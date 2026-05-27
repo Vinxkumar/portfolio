@@ -12,7 +12,7 @@ const LandingPage = () => {
     <>
       <div className="absolute w-full h-full flex flex-col m-1  justify-start text-[#eee8d8] ">
 
-        {/*  Nav Bar */}
+
         <div className=" flex gap-2">
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -41,7 +41,7 @@ const LandingPage = () => {
           <div className="">
             <SplitText
               text="Building things"
-              className=" text-center"
+              className=" text-center selection:text-[#c05c40] selection:bg-[#eee8d8]"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -57,7 +57,7 @@ const LandingPage = () => {
           <div className="m-2 gap-6 flex">
             <SplitText
               text="that"
-              className=" text-center"
+              className=" text-center selection:text-[#c05c40] selection:bg-[#eee8d8]"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -71,7 +71,7 @@ const LandingPage = () => {
             />
             <SplitText
               text=" Actually"
-              className=" text-center  text-[#c05c40]"
+              className=" text-center  text-[#c05c40] selection:text-[#eee8d8] selection:bg-[#c05c40]"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -97,7 +97,7 @@ const LandingPage = () => {
       rotationInterval={2000}
       auto
       loop
-      className="bg-[#c05c40] transition-transform ease-in-out rounded-2xl translate-x-1"
+      className="bg-[#c05c40] transition-transform ease-in-out rounded-2xl translate-x-1 selection:text-[#c05c40] selection:bg-[#eee8d8]"
     />
   </motion.div>
           </div>
