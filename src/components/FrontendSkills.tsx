@@ -33,6 +33,11 @@ type skill = {
 
     size: skillSize,
     top: string,
+    bg?: string,
+    icon?: IconType,
+    link?:string,
+    color?:string,
+
     right: string,
     dur: number,
     delay: number
@@ -52,7 +57,9 @@ const skills: skill[] = [
     link:"https://www.geeksforgeeks.org/advance-java/spring-boot/"
 },
 
-{ name: "tailwindCSS",size: 3, top: "18%", right: "58%", dur: 1.9, delay: 2.1 },
+{ name: "tailwindCSS",size: 3, top: "18%", right: "60%", dur: 1.9, delay: 2.1, bg:"#38BDF8", icon:RiTailwindCssFill,
+    link:"https://tailwindcss.com/docs/installation/using-vite"
+ },
 
 { name: "Vite",size: 3, top: "28%", right: "43%", dur: 2.2, delay: 1.0, bg:"#646CFF", icon:TbBrandVite,
     link:"https://vite.dev/guide/"
