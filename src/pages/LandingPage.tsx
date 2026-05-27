@@ -32,7 +32,6 @@ const HomePage = ({scrolly} : ScrollPosition) => {
           />
         </div>
 
-        {/*  Home Secren Nav */}
         <HomeNav scrolly={scrolly}/>
 
         
