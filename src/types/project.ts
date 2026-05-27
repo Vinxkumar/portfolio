@@ -6,7 +6,7 @@ export interface projectProp {
     link: string
     status: "ongoing" | "complete"  
 
-    delay: number,
-    top:string,
-    left:string
+    delay?: number,
+    top?:string,
+    left?:string
 }
