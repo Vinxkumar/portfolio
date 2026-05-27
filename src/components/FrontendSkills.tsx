@@ -145,9 +145,12 @@ const Skills = () => {
                         initial={{}}
                         animate={{y:[0, -10, 0], opacity:1}}
                         transition={{repeat:Infinity, duration:skill.dur, delay:skill.delay}}
-                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border text-[#eee8d8] border-[#c8bfa8] bg-[#c05c40] transition-all ease-in-out hover:scale-110 "
-                            style={{ top: skill.top, right: skill.right }}
-                        >{skill.name}</motion.div>
+                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border  border-[#c8bfa8] bg-[#c05c40] transition-all ease-in-out hover:scale-110 "
+                            style={{ top: skill.top, right: skill.right, background: skill.bg, color:skill.color }}
+                        >
+                            <a href={skill.link? skill.link : ""} className="flex text-sm gap-2 items-center justify-center w-full h-full" >
+                            {(() => { const Icon = skill.icon as IconType; return Icon ? <Icon size={14}/> : null })()} {skill.name} </a>
+                        </motion.div>
                     ))
                 }
             </motion.div>
