@@ -1,187 +1,87 @@
 import Shuffle from './ui/Shuffle';
-import {motion} from "framer-motion"
+import {useMemo } from "react"
+import { motion, } from "framer-motion"
 
 type ScrollPosition = {
   scrolly: number;
 };
 
+const navItems = [
+  { label: "about", id: "about" },
+  { label: "projects", id: "projects" },
+  { label: "skills", id: "skills" },
+  { label: "contact", id: "contact" },
+]
 
-const HomeNav = ({scrolly}: ScrollPosition) => {
+const HomeNav = ({ scrolly }: ScrollPosition) => {
 
-    return (
-        <>
-<motion.div
-  initial={{ y: -100, opacity: 0 }}
-  transition={{ duration: 0.8 }}
-  animate={{ y: 0, opacity: 1 }}
+  const navClass = useMemo(() => `flex items-center justify-between p-2 bg-[#eee8d8]/80 border-b-2 border-[#3a3a3a] shadow-lg backdrop-blur-sm text-[#eee8d8] transition-all duration-300 ease-in-out ${
+    scrolly > 25 ? "mt-2.5 pl-4 rounded-2xl w-[80%]" : "w-full rounded-none"
+  }`, [scrolly])
 
-  className="fixed z-30 top-0 left-0 w-full flex justify-center"
->
-  <div className={`flex items-center justify-between p-2  bg-[#eee8d8]/80 border-b-2 border-[#3a3a3a] shadow-lg b text-[#eee8d8]  backdrop-blur-lg transition-all duration-300 ease-in-out
-          ${scrolly > 25
-      ? "mt-2.5 pl-4 rounded-2xl w-[80%] border-b-2 border-b-[#3a3a3a]"
-      : "w-full rounded-none"
-    }
-  `}>
-            <motion.span
-              initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.5, duration: 0.8 }}
-              className="font-bold text-md w-38 "
+  return (
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed z-30 top-0 left-0 w-full flex justify-center"
+    >
+      <div className={navClass}>
+
+        {/* Logo */}
+        <Shuffle
+          text="Vinod Kumar S"
+          shuffleDirection="up"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={3}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover
+          respectReducedMotion={true}
+          loop={false}
+          loopDelay={0}
+          className="font-bold text-md text-[#c05c40] w-38"
+        />
+
+        {/* Nav Items */}
+        <div className="absolute left-1/2 -translate-x-1/2 flex gap-12 items-center justify-center">
+          {navItems.map(({ label, id }) => (
+            <button
+              key={id}
+              onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })}
+              className="cursor-pointer transition-all ease-in-out hover:scale-110"
             >
-                          <Shuffle
-              text="Vinod Kumar S"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className="text-md text-[#c05c40] "
-            />
-            </motion.span>
-         
-            <motion.div
-            className=" absolute left-1/2 flex  gap-12 items-center justify-center w-25"
-            >
-
-
- 
-
-
-
-
-            <div className=" flex ">
-              <motion.button 
-                            initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`group cursor-pointer transition-all ease-in-out text-gray-400 hover:text-gray-200 hover:scale-130 `}>
               <Shuffle
-              text="about"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className=" text-md hover:scale-x-1.1 text-[#c05c40]"
+                text={label}
+                shuffleDirection="up"
+                duration={0.35}
+                animationMode="evenodd"
+                shuffleTimes={3}
+                ease="power3.out"
+                stagger={0.03}
+                threshold={0.1}
+                triggerOnce={true}
+                triggerOnHover
+                respectReducedMotion={true}
+                loop={false}
+                loopDelay={0}
+                className="text-md text-[#c05c40]"
               />
-            
-              </motion.button>
-              
-            </div>
+            </button>
+          ))}
+        </div>
 
-                        <div className=" flex  ">
-              <motion.button 
-                            initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`group cursor-pointer text-gray-400 hover:text-gray-200 hover:scale-130 transition-all ease-in-out`}>
-              <Shuffle
-              text="projects"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className=" text-md text-[#c05c40]"
-              />
-            
-              </motion.button>
-              
-            </div>   
+        {/* Hire Me */}
+        <button className="flex items-center justify-center mr-3 gap-2 text-sm w-18 h-8 rounded-xl cursor-pointer bg-[#c05c40] text-white">
+          Hire ME
+        </button>
 
-            <div className="flex ">
-              <motion.button 
-                            initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-              className={`group cursor-pointer text-gray-400 hover:text-gray-200 hover:scale-130 transition-all ease-in-out`}>
-              <Shuffle
-              text="skills"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className=" text-md text-[#c05c40]"
-              />
-            
-              </motion.button>
-            </div>
-
-            <div className="flex  ">
-              <motion.button 
-                            initial={{ z: 0, opacity: 0 }}
-              animate={{ z: 10, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.8 }}
-              className={`group cursor-pointer text-gray-400 hover:text-gray-200 hover:scale-130 transition-all ease-in-out`}>
-              <Shuffle
-              text="contact"
-              shuffleDirection="up"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={3}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover
-              respectReducedMotion={true}
-              loop={false}
-              loopDelay={0}
-              className=" text-md text-[#c05c40]"
-              />
-            
-              </motion.button>
-              
-            </div>
-
-          </motion.div>
-
-          <motion.button
-            initial={{ z: 0, opacity: 0 }}
-            animate={{ z: 10, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className={`flex items-center justify-center mr-3 gap-2 text-sm w-18 h-8 rounded-xl cursor-pointer  text-  bg-[#c05c40] `}
-            // onClick={() => setDarkMode(!darkMode)}
-          >
-            Hire ME
-          </motion.button>
-          </div>
-        </motion.div>
-        </>
-    )
-
+      </div>
+    </motion.div>
+  )
 }
 
 export default HomeNav

@@ -20,7 +20,7 @@ const HomePage = ({scrolly} : ScrollPosition) => {
       className={`relative w-full min-h-screen flex pt-4  justify-between transition-colors duration-700  bg-[#1e1e1e] overflow-hidden 
       `}
       >
-        <div className="absolute z-10 w-full h-full">
+        {/* <div className="absolute z-10 w-full h-full">
           <ShapeGrid
             speed={0.5}
             squareSize={40}
@@ -30,7 +30,7 @@ const HomePage = ({scrolly} : ScrollPosition) => {
             shape="square"
             hoverTrailAmount={0}
           />
-        </div>
+        </div> */}
 
         <HomeNav scrolly={scrolly}/>
 
