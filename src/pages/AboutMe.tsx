@@ -122,13 +122,14 @@ const AboutMe = () => {
   whileInView={{ y: 0, opacity: 1 }}
   viewport={{ once: true }}
   transition={{ delay: 0.8, duration: 0.8 }}
-  className="absolute left-1/2 flex-col -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all ease-in-out flex items-center justify-center"
+  className="absolute left-1/2 flex-col -translate-x-1/2 top-1/2 -translate-y-1/2  flex items-center justify-center"
 >
 
   <motion.div
     whileInView={{ y: [0, -10, 0] }}
-    transition={{ repeat: Infinity, delay: 1.9, duration: 4.5 }}
-    className="w-64 h-64 rounded-full overflow-hidden border-4 border-[#c05c40]"
+    transition={{ repeat: Infinity, delay: 0.9, duration: 4.5 }}
+
+    className="w-64 h-64 rounded-full transition-transform ease-in-out overflow-hidden border-4 border-[#c05c40]"
   >
     <img src={profilePic} alt="Vinod Kumar S" className="w-full h-full object-cover object-top" />
   </motion.div>
