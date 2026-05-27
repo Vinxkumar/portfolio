@@ -7,12 +7,14 @@ import { motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
 import FrontendSkills from "../components/FrontendSkills";
 import profilePic from "../assets/profilepic.png";
+import CountUp from "../components/CountUp";
 const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between px-16 z-10 bg-[#eee8d8] w-screen h-screen overflow-hidden"
+      className="relative flex items-center justify-between bg-[#1e1e1e] w-screen h-screen "
     >
+      <div className="relative flex items-center rounded-3xl justify-between px-16 z-10 bg-[#eee8d8] w-full h-full">
       {/* <div className="absolute left-4 top-18 flex flex-col items-start w-36">
         <BlurText
           text="AboutMe"
@@ -109,36 +111,60 @@ const AboutMe = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 1.4, duration: 0.5 }}
-          className="flex items-center justify-center border border-[#c05c40] w-42 h-12 rounded-2xl overflow-hidden hover:scale-105 transition-all ease-in-out"
+          className="flex items-center justify-center border border-[#c05c40] w-42 h-12 hover:rounded-xl overflow-hidden hover:scale-105 transition-all ease-in-out"
         >
           <ResumeButton />
         </motion.div>
       </div>
 
-      <motion.div 
-      initial={{y:100, opacity:0}}
-      whileInView={{y:0, opacity:1}}
-      viewport={{once: true}}
-      transition={{
-        delay:0.8, duration:0.8, ease:"easeInOut"
-      }}
-      className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all ease-in-out flex items-center justify-center">
-        <motion.div 
-        initial={{}}
-        whileInView={{y:[0,-10,0], opacity:1}}
-        transition={{repeat:Infinity, delay:1.9, duration:1.9,ease:"easeInOut"}}
-        className="w-64 h-64 rounded-full overflow-hidden border-4 transition-all ease-in-out border-[#c05c40]">
-          <img
-            src={profilePic}
-            alt="Vinod Kumar S"
-            className="w-full h-full object-cover object-top"
-          />
-        </motion.div>
+      <motion.div
+  initial={{ y: 100, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.8, duration: 0.8 }}
+  className="absolute left-1/2 flex-col -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all ease-in-out flex items-center justify-center"
+>
+
+  <motion.div
+    whileInView={{ y: [0, -10, 0] }}
+    transition={{ repeat: Infinity, delay: 1.9, duration: 4.5 }}
+    className="w-64 h-64 rounded-full overflow-hidden border-4 border-[#c05c40]"
+  >
+    <img src={profilePic} alt="Vinod Kumar S" className="w-full h-full object-cover object-top" />
+  </motion.div>
+
+  {/* Stats Row */}
+  <div className="flex flex-row gap-3 mt-[5%]">
+
+    {[
+      { count: 5, label: "Projects", mar:"0%" },
+      { count: 3, label: "Technologies", mar:"5%" },
+      { count: 3, label: "Months of exp", mar:"2%" },
+    ].map((stat, idx) => (
+      <motion.div
+        key={idx}
+        initial={{ }}
+        whileInView={{ y: [0, -10, 0], opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.8 + idx * 0.2, duration: 2.5, repeat: Infinity }}
+        style={{marginTop: stat.mar}}
+        className={`flex flex-col p-2 items-center justify-center rounded-xl hover:scale-110 transition-all ease-in-out`}
+      >
+        <div className="text-3xl items-center justify-center font-poppins font-semibold text-[#c05c40]">
+          <span>+</span>
+          <CountUp from={0} to={stat.count} direction="up" duration={0.1} delay={2} className="count-up-text" />
+        </div>
+        <span>{stat.label}</span>
       </motion.div>
+    ))}
+
+  </div>
+</motion.div>
 
       <div className=""></div>
       <div className="flex items-center w-110  justify-center   h-[73%]">
         <FrontendSkills />
+      </div>
       </div>
     </div>
   );
