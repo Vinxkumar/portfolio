@@ -17,7 +17,7 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
 
   className="fixed z-30 top-0 left-0 w-full flex justify-center"
 >
-  <div className={`flex items-center justify-between p-2  bg-[#2c2c2c]/50 border-b-2 border-[#3a3a3a] shadow-lg b text-[#eee8d8]  backdrop-blur-lg transition-all duration-300 ease-in-out
+  <div className={`flex items-center justify-between p-2  bg-[#eee8d8]/80 border-b-2 border-[#3a3a3a] shadow-lg b text-[#eee8d8]  backdrop-blur-lg transition-all duration-300 ease-in-out
           ${scrolly > 25
       ? "mt-2.5 pl-4 rounded-2xl w-[80%] border-b-2 border-b-[#3a3a3a]"
       : "w-full rounded-none"
@@ -43,7 +43,7 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
               respectReducedMotion={true}
               loop={false}
               loopDelay={0}
-              className="text-md text-[#c05c40]"
+              className="text-md text-[#c05c40] "
             />
             </motion.span>
          
@@ -172,7 +172,7 @@ const HomeNav = ({scrolly}: ScrollPosition) => {
             initial={{ z: 0, opacity: 0 }}
             animate={{ z: 10, opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className={`flex items-center justify-center mr-3 gap-2 text-sm w-18 h-8 rounded-xl cursor-pointer  text-[text-[#c05c40]]  border border-gray-300 `}
+            className={`flex items-center justify-center mr-3 gap-2 text-sm w-18 h-8 rounded-xl cursor-pointer  text-  bg-[#c05c40] `}
             // onClick={() => setDarkMode(!darkMode)}
           >
             Hire ME
