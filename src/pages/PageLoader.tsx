@@ -17,7 +17,7 @@ const PageLoader = () => {
   useEffect(() => {
     preloadLogin()
 
-    const t = setTimeout(() => navigate('/home'), 5000)
+    const t = setTimeout(() => navigate('/home'), 3000)
     return () => clearTimeout(t)
   }, [])
   return (
