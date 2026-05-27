@@ -102,7 +102,7 @@ const ProjectCard = () => {
             initial={{y:100, opacity:0}}
             whileInView={{y:0, opacity:1}}
             transition={{
-                delay: 0.8, duration:0.5
+                delay: 0.4, duration:0.5
             }}
         className="w-[30%] h-full p-4 bg-[#2c2c2c] border transition-normal ease-in  rounded-2xl border-[#3a3a3a]">
           <div className="grid grid-cols-1 ">
@@ -120,12 +120,12 @@ const ProjectCard = () => {
         </motion.div>
 
         <motion.div 
-        initial={{y:100, opacity:0}}
-        whileInView={{y:0, opacity:1}}
-        transition={{
-          delay:0.8, duration:0.5
-        }}
-        className="relative group w-[70%] group flex transition-all ease-in-out flex-col z-10 h-full p-4 bg-[#2c2c2c] rounded-2xl border border-[#3a3a3a]">
+            initial={{y:100, opacity:0}}
+            whileInView={{y:0, opacity:1}}
+            transition={{
+                delay: 0.8, duration:0.5
+            }}
+        className="relative group w-[70%] group flex  flex-col z-10 h-full p-4 bg-[#2c2c2c] rounded-2xl border border-[#3a3a3a]">
           <h3 className="absolute top-[3%] text-[#c05c40] font-bold font-poppins text-2xl">
             {selected.title}
           </h3>
