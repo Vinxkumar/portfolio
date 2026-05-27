@@ -1,5 +1,31 @@
 import {motion} from "framer-motion"
 
+import { FaReact } from "react-icons/fa";
+import { BsTypescript } from "react-icons/bs";
+import { BiLogoSpringBoot } from "react-icons/bi";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandVite } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa6";
+// appscript
+import { SiPostgresql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiFlask } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+// c/c++
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaLinux } from "react-icons/fa";
+import { GiArchiveResearch } from "react-icons/gi";
+// software engineer
+import { MdDeveloperMode } from "react-icons/md";
+
+import type { IconType } from "react-icons/lib";
+
+
+
 type skillSize = 1 | 2 | 3
 
 type skill = {
