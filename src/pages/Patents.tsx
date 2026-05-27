@@ -19,7 +19,7 @@ const Patents = () => {
             initial={{ scaleX: 0, opacity: 1 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.9 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="absolute -bottom-1 h-0.75 w-full origin-left rounded-full bg-[#e8805e]"
           />
         </div >
