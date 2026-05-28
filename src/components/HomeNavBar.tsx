@@ -15,8 +15,8 @@ const navItems = [
 
 const HomeNav = ({ scrolly }: ScrollPosition) => {
 
-  const navClass = useMemo(() => `flex items-center justify-between p-2 bg-[#eee8d8]/80 border-b-2 border-[#3a3a3a] shadow-lg backdrop-blur-sm text-[#eee8d8] transition-all duration-300 ease-in-out ${
-    scrolly > 25 ? "mt-2.5 pl-4 rounded-2xl w-[80%]" : "w-full rounded-none"
+  const navClass = useMemo(() => `flex items-center justify-between p-2  backdrop-blur-sm text-[#eee8d8] transition-all duration-300 ease-in-out ${
+    scrolly > 25 ? "mt-2.5 pl-4 rounded-2xl w-[80%] border-b-2 border-[#3a3a3a] bg-[#eee8d8]" : "w-full rounded-none"
   }`, [scrolly])
 
   return (
@@ -45,8 +45,6 @@ const HomeNav = ({ scrolly }: ScrollPosition) => {
           loopDelay={0}
           className="font-bold text-md text-[#c05c40] w-38"
         />
-
-        {/* Nav Items */}
         <div className="absolute left-1/2 -translate-x-1/2 flex gap-12 items-center justify-center">
           {navItems.map(({ label, id }) => (
             <button
