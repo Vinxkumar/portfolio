@@ -101,6 +101,7 @@ const ProjectCard = () => {
         <motion.div 
             initial={{y:100, opacity:0}}
             whileInView={{y:0, opacity:1}}
+            viewport={{once:true}}
             transition={{
                 delay: 0.4, duration:0.5
             }}
@@ -111,7 +112,7 @@ const ProjectCard = () => {
                 key={idx}
                 onClick={() => setCurrentProject(idx)}
                 className={`w-full cursor-pointer flex items-center h-12 border-b border-[#3a3a3a] transition-all ease-in-out text-[#eee8d8] hover:ml-[3%] hover:border-b-white hover:border-b-2 
-                ${currentProject == idx ? "ml-[3%] border-b-3 border-b-[#c05c40]" : ""}`}
+                ${currentProject == idx ? "ml-[3%] border-b-3 border-b-[#c05c40] " : ""}`}
               >
                 {project.title}
               </button>
@@ -125,6 +126,7 @@ const ProjectCard = () => {
             transition={{
                 delay: 0.8, duration:0.5
             }}
+            viewport={{once:true}}
         className="relative group w-[70%] group flex  flex-col z-10 h-full p-4 bg-[#2c2c2c] rounded-2xl border border-[#3a3a3a]">
           <h3 className="absolute top-[3%] text-[#c05c40] font-bold font-poppins text-2xl">
             {selected.title}
