@@ -24,8 +24,8 @@ const PatentsCards = () => {
 
       animate={{ y: [0, 5, 0],  opacity: 1 }}
       transition={{
-        delay: 1.5,
-        duration: 2.5,
+        delay: 1,
+        duration: 0.9,
         repeat: Infinity,
         ease: "easeInOut",
       }}
