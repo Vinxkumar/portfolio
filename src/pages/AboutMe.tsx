@@ -39,7 +39,7 @@ const AboutMe = () => {
           pauseDuration={1500}
           showCursor
           cursorCharacter="_"
-          initialDelay={500}
+          initialDelay={100}
           loop={false}
           deletingSpeed={0}
           cursorBlinkDuration={0.5}
@@ -153,7 +153,7 @@ const AboutMe = () => {
       >
         <div className="text-3xl items-center justify-center font-poppins font-semibold text-[#c05c40]">
           <span>+</span>
-          <CountUp from={0} to={stat.count} direction="up" duration={0.1} delay={2} className="count-up-text" />
+          <CountUp from={0} to={stat.count} direction="up" duration={0.1} delay={1} className="count-up-text" />
         </div>
         <span>{stat.label}</span>
       </motion.div>
