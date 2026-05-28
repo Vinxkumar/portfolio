@@ -8,6 +8,7 @@ import "./App.css";
 const HomeScreenLazy = lazy(() => import("./pages/LandingPage"));
 const ProjectsScreenLazy = lazy(() => import("./pages/Projects"));
 const Patents = lazy(() => import("./pages/Patents"));
+const Skills = lazy(() => import("./pages/Skills"));
 
 function App() {
   const [scrolly, setScrollY] = useState(0);
@@ -30,17 +31,13 @@ function App() {
               }
             >
               <main>
-                {/* import ClickSpark from './ClickSpark'; */}
-
-
-  {/* Your content here */}
 
                 <HomeScreenLazy scrolly={scrolly} />
                 <AboutMe />
                 <ProjectsScreenLazy />
 
                 <Patents />
-                {/* </ClickSpark> */}
+                <Skills/>
               </main>
             </Suspense>
           }
