@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const LandingPage = () => {
   return (
     <>
-      <div className="absolute w-full h-full flex flex-col m-1  justify-start text-[#eee8d8] ">
+      <div className="absolute w-full h-full flex flex-col m-1  justify-start text-gh-text ">
 
 
         <div className=" flex gap-2">
