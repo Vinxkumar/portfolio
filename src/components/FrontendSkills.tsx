@@ -141,7 +141,7 @@ const Skills = () => {
                         whileInView={{y:0, opacity:1}}
                         viewport={{once:true}}
                         transition={{duration:0.5, delay:skill.delay * 0.3}}
-                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border transition-transform ease-linear duration-75 border-[#c8bfa8] bg-[#c05c40] hover:rotate-6 hover:scale-110 "
+                            className="absolute flex items-center justify-center gap-2 rounded-3xl px-3 h-8 border  transition-transform ease-linear duration-75  hover:rotate-6 hover:rounded-none hover:shadow-2xl hover:border-0 hover:scale-110 "
                             style={{ top: skill.top, right: skill.right, background: skill.bg, color:skill.color }}
                         >
                             <a href={skill.link? skill.link : "/blank"} className="flex text-sm gap-2 items-center justify-center w-full h-full " >
