@@ -28,27 +28,6 @@ const HomePage = ({scrolly} : ScrollPosition) => {
           <LandingPage/>
         </div>
 
-        <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 1, duration: 1.25, ease: "anticipate" }}
-  
-  className="absolute right-0 top-24 w-1/2 h-[70%] z-30 overflow-hidden"
->
-  <MetaBalls
-    color="#c05c40"
-    cursorBallColor="#c05c40"
-    cursorBallSize={2}
-    ballCount={22}
-    animationSize={20}
-    enableMouseInteraction
-    enableTransparency={true}
-    hoverSmoothness={0.088}
-    clumpFactor={0.9}
-    speed={0.3}
-  />
-</motion.div>
-
         <motion.div 
                     initial={{ z: 0, opacity: 0 }}
             animate={{ z: 10, opacity: 1 }}
