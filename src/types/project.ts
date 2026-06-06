@@ -1,3 +1,12 @@
+import type React from "react"
+
+interface techStack {
+    name: string,
+    bg: string,
+    icon ?: string | React.ReactNode
+}
+
+
 export interface projectProp {
     title: string,
     description: string,
