@@ -4,7 +4,7 @@ import PatentsCards from "../components/PatentCards";
 const Patents = () => {
   return (
     <>
-      <div className="relative z-10  w-screen h-[80vh] bg-[#2c2c2c] overflow-hidden ">
+      <div id="research-works" className="relative z-10  w-screen h-[80vh] bg-[#2c2c2c] overflow-hidden ">
          
 
         <div className="absolute justify-start items-start flex flex-col w-32 left-[2%] top-0 mt-[4%] text-[#e8805e]">

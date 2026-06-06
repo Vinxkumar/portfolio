@@ -5,8 +5,22 @@
 @theme {
   --font-dm: 'DM Sans', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
+
+    --color-gh-bg:       #0d1117;
+  --color-gh-surface:  #161b22;
+  --color-gh-border:   #21262d;
+  --color-gh-muted:    #7d8590;
+  --color-gh-text:     #e6edf3;
+  --color-gh-accent:   #3fb950;
+  --color-gh-accent-2: #26a641;
+  --color-gh-accent-3: #0e4429;
 }
 
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #FF7A59;
+}
 
 html,
 body,

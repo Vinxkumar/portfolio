@@ -8,7 +8,7 @@ const GitHubButton = () => {
   href="https://github.com/Vinxkumar" 
   target="_blank" 
   rel="noopener noreferrer"
-  className="w-full h-full cursor-pointer"
+  className="w-full hover:text-gh-bg h-full  cursor-pointer"
 >
   <FaGithub className="w-full h-full" />
 </a>

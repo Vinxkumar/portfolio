@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import AboutMe from "./pages/AboutMe";
 import "./App.css";
 
+// import Background from "./pages/BackgroundTesting";
+
 const HomeScreenLazy = lazy(() => import("./pages/LandingPage"));
 const ProjectsScreenLazy = lazy(() => import("./pages/Projects"));
 const Patents = lazy(() => import("./pages/Patents"));
@@ -30,7 +32,7 @@ function App() {
                 <div className="w-screen h-screen flex items-center justify-center bg-[#09090b]" />
               }
             >
-              <main>
+              <main >
 
                 <HomeScreenLazy scrolly={scrolly} />
                 <AboutMe />
@@ -42,6 +44,7 @@ function App() {
             </Suspense>
           }
         />
+        {/* <Route path="/bg" element={<Background/>}/> */}
       </Routes>
     </>
   );

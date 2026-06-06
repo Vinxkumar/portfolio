@@ -12,26 +12,18 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between bg-[#1e1e1e] w-screen h-screen "
+      className="relative flex items-center justify-between bg-gh- w-screen h-screen "
     >
-      <div className="relative flex items-center rounded-3xl justify-between px-16 z-10 bg-[#eee8d8] w-full h-full">
-      {/* <div className="absolute left-4 top-18 flex flex-col items-start w-36">
-        <BlurText
-          text="AboutMe"
-          delay={500}
-          animateBy="words"
-          direction="top"
-          className="font-poppins text-3xl font-bold text-[#c05c40]"
-        />
-        <motion.div
-          initial={{ scaleX: 0, opacity: 1 }}
-          whileInView={{ scaleX: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.9 }}
-          className="absolute -bottom-1 h-0.5 w-full origin-left rounded-full bg-[#c05c40]"
-        />
-      </div> */}
+<div
+  className="
+    absolute inset-0 z-2 w-full h-full
+    bg-[linear-gradient(rgba(22,163,74,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(22,163,74,0.12)_1px,transparent_1px)]
+    bg-[size:32px_32px]
+  "
+/>
+      <div className="relative flex items-center rounded-2xl justify-between px-16 z-10  w-full h-full">
 
+      
       <div className=" flex flex-col mt-[5%] h-4/5  items-start justify-center gap-5 w-2/5">
         <TextType
           text={["Vinod Kumar S"]}
@@ -44,12 +36,12 @@ const AboutMe = () => {
           deletingSpeed={0}
           cursorBlinkDuration={0.5}
           startOnVisible
-          className="font-poppins font-bold text-[#1e1e1e] text-5xl"
+          className="font-poppins font-bold text-gh-accent-3 text-5xl"
         />
 
         <SplitText
           text="B.C.A @ New Horizon College"
-          className="text-xl font-semibold font-poppins text-[#c05c40]"
+          className="text-xl font-semibold font-poppins text-gh-accent-2"
           delay={50}
           duration={1.25}
           ease="power3.out"
@@ -63,7 +55,7 @@ const AboutMe = () => {
 
         <SplitText
           text="Software Engineer"
-          className="text-xl font-semibold font-poppins text-[#5a5248]"
+          className="text-xl font-semibold font-poppins text-[#052e16]"
           delay={50}
           duration={1.25}
           ease="power3.out"
@@ -82,7 +74,7 @@ const AboutMe = () => {
             delay: 0.8,
             duration: 0.8,
           }}
-          className="bg-[#ddd6c4] p-4 text-[#5a5248] border h-1/2 rounded-2xl w-[70%]"
+          className="bg-[#dcfce7] p-4 text-[#052e16] border h-1/2 rounded-2xl w-[70%]"
         >
           I'm a final-year BCA student at New Horizon College passionate about
           building clean, scalable software. I enjoy working across the full
@@ -99,7 +91,7 @@ const AboutMe = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 + i * 0.2, duration: 0.5 }}
-              className="cursor-pointer w-8 text-[#c05c40]"
+              className="cursor-pointer w-8 transition-all hover:-translate-y-1 text-gh-accent-3"
             >
               <Btn />
             </motion.div>
@@ -111,7 +103,7 @@ const AboutMe = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 1.4, duration: 0.5 }}
-          className="flex items-center justify-center border border-[#c05c40] w-42 h-12 hover:rounded-xl overflow-hidden hover:scale-105 transition-all ease-in-out"
+          className="flex items-center justify-center  w-42 h-12 hover:rounded-xl overflow-hidden hover:scale-105 transition-all ease-in-out"
         >
           <ResumeButton />
         </motion.div>
@@ -129,7 +121,7 @@ const AboutMe = () => {
     whileInView={{ y: [0, -10, 0] }}
     transition={{ repeat: Infinity, delay: 0.9, duration: 4.5 }}
 
-    className="w-64 h-64 rounded-full transition-transform ease-in-out overflow-hidden border-4 border-[#c05c40]"
+    className="w-64 h-64 rounded-full transition-transform ease-in-out overflow-hidden border-4 border-gh-accent-3"
   >
     <img src={profilePic} alt="Vinod Kumar S" className="w-full h-full object-cover object-top" />
   </motion.div>
@@ -147,11 +139,11 @@ const AboutMe = () => {
         initial={{ }}
         whileInView={{ y: [0, -10, 0], opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.8 + idx * 0.2, duration: 2.5, repeat: Infinity }}
+        transition={{ delay: 0.8 + idx * 0.2, duration: 0.1, repeat: Infinity }}
         style={{marginTop: stat.mar}}
         className={`flex flex-col p-2 items-center justify-center rounded-xl hover:scale-110 transition-all ease-in-out`}
       >
-        <div className="text-3xl items-center justify-center font-poppins font-semibold text-[#c05c40]">
+        <div className="text-3xl items-center justify-center font-poppins font-semibold text-gh-accent-2">
           <span>+</span>
           <CountUp from={0} to={stat.count} direction="up" duration={0.1} delay={1} className="count-up-text" />
         </div>
