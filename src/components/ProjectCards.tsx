@@ -20,12 +20,12 @@ const ProjectCard = () => {
       description:
         "A tamper-proof college election platform built on blockchain, ensuring transparent and verifiable voting with immutable records and secure student authentication",
       tech: [
-        "React",
-        "TailwindCSS",
-        "TypeScript",
-        "Solidity",
-        "MetaMask",
-        "Remix",
+        { name: "HTML/5",      bg: "#e34f26", icon: <FaHtml5 /> },
+        { name: "CSS/3",       bg: "#1572b6", icon: <FaCss3Alt /> },
+        { name: "JavaScript",  bg: "#f7df1e", icon: <FaJs /> },
+        { name: "Solidity",    bg: "#a855f7", icon: <SiSolidity /> },
+        { name: "Metamask",    bg: "#f6851b", icon: <FaMask /> },
+        { name: "Remix",       bg: "#7c3aed", icon: <FaMix /> },
       ],
       status: "complete",
       link: "http://github.com/Vinxkumar/Blockchain-Based-Voting-System",
@@ -38,7 +38,12 @@ const ProjectCard = () => {
       title: "Folio",
       description:
         "A modern developer portfolio built with React, TypeScript, and Tailwind CSS — featuring scroll-based animations, dynamic UI components, and a dark aesthetic that reflects my design sensibility",
-      tech: ["React", "TailwindCSS", "TypeScript", "Framer-Motion"],
+      tech: [
+        { name: "TypeScript",  bg: "#3178c6", icon: <SiTypescript /> },
+        { name: "React",       bg: "#61dafb", icon: <FaReact /> },
+        { name: "TailwindCSS", bg: "#38bdf8", icon: <SiTailwindcss /> },
+        {name:"FramerMotion" , bg: "yellow", icon:<FaDailymotion/>}
+      ],
       status: "complete",
       link: "https://github.com/Vinxkumar/portfolio",
       img: portfolio,
@@ -46,53 +51,74 @@ const ProjectCard = () => {
       // left: "33.34%",
       // delay: 0.7,
     },
-    {
-      title: "VisionCaption",
-      description:
-        "An AI-powered image captioning tool that uses Salesforce BLIP via Hugging Face to automatically generate natural language descriptions from uploaded images",
-      tech: ["Python", "Tkinter", "HuggingFace", "torch", "BLIP"],
-      status: "complete",
-      link: "https://github.com/Vinxkumar/VisionCaption",
-      img: visionCaption
-      // top: "0%",
-      // left: "66.68%",
-      // delay: 0.4,
-    },
-    {
-      title: "Doc@Care",
-      description:
-        "A fullstack healthcare management system enabling patients to book appointments, view prescriptions, and track medical history — while doctors and pharmacists manage records and medicine inventory in real time",
-      tech: [
-        "React",
-        "TailwindCSS",
-        "TypeScript",
-        "Vite",
-        "SpringBoot",
-        "Java",
-      ],
-      img:DocCare,
-      status: "ongoing",
-      link: "https://github.com/Vinxkumar/Hospital-CRM",
-      // top: "50%",
-      // left: "0%",
-      // delay: 0.2,
-    },
-    {
-      title: "AutoAttendance",
-      description:
-        "An automated attendance tracking system that streamlines student attendance management with real-time updates and reporting for teachers",
-      tech: ["React", "TailwindCSS", "TypeScript", "Vite", "Flask", "python"],
-      status: "ongoing",
-      img: autoattend,
-      link: "https://auto-attendance-three.vercel.app/",
-      // top: "50%",
-      // left: "33.34%",
-      // delay: 0.5,
-    },
-  ];
+ {
+    title: "VisionCaption",
+    description: "An AI-powered image captioning tool that uses Salesforce BLIP via Hugging Face to automatically generate natural language descriptions from uploaded images",
+    status: "complete",
+    gitlink: "https://github.com/Vinxkumar/VisionCaption",
+    img: visionCaption,
+    tech: [
+      { name: "Python",      bg: "#3b82f6", icon: <FaPython /> },
+      { name: "Tkinter",     bg: "#64748b", icon: <FaPython /> },
+      { name: "HuggingFace", bg: "#f59e0b", icon: <SiHuggingface /> },
+      { name: "torch",       bg: "#ee4c2c", icon: <SiPytorch /> },
+      { name: "BLIP",        bg: "#8b5cf6", icon: <SiHuggingface /> },
+    ],
+    delay: 1
+  },
+  {
+    title: "Doc@Care",
+    description: "A fullstack healthcare management system enabling patients to book appointments, view prescriptions, and track medical history — while doctors and pharmacists manage records and medicine inventory in real time",
+    status: "ongoing",
+    gitlink: "https://github.com/Vinxkumar/Hospital-CRM",
+    img: DocCare,
+    tech: [
+      { name: "React",       bg: "#61dafb", icon: <FaReact /> },
+      { name: "TailwindCSS", bg: "#38bdf8", icon: <SiTailwindcss /> },
+      { name: "TypeScript",  bg: "#3178c6", icon: <SiTypescript /> },
+      { name: "Vite",        bg: "#a855f7", icon: <SiVite /> },
+      { name: "SpringBoot",  bg: "#6db33f", icon: <SiSpringboot /> },
+      { name: "Java",        bg: "#f89820", icon: <FaJava /> },
+    ],
+    delay: 1.3
+  },
+  {
+    title: "AutoAttendance",
+    description: "An automated attendance tracking system that streamlines student attendance management with real-time updates and reporting for teachers",
+    status: "ongoing",
+    gitlink:"https://github.com/Vinxkumar/AutoAttendance_FE",
+    gitlink_:"https://github.com/Vinxkumar/AutoAttendance_BE",
+    liveLink: "https://auto-attendance-three.vercel.app/",
+    img: autoattend,
+    tech: [
+      { name: "React",       bg: "#61dafb", icon: <FaReact /> },
+      { name: "TailwindCSS", bg: "#38bdf8", icon: <SiTailwindcss /> },
+      { name: "TypeScript",  bg: "#3178c6", icon: <SiTypescript /> },
+      { name: "Vite",        bg: "#a855f7", icon: <SiVite /> },
+      { name: "Flask",       bg: "#94a3b8", icon: <SiFlask /> },
+      { name: "Python",      bg: "#3b82f6", icon: <FaPython /> },
+    ],
+    delay: 1.8
+  },
+  {
+    title: "loading in Future",
+    description: "Something is cooking — stay tuned.",
+    status: "future",
+    gitlink:"",
+    gitlink_:"",
+    liveLink: "",
 
-  const [currentProject, setCurrentProject] = useState(0);
-  const selected = projects[currentProject];
+    tech: [
+      { name: "React",       bg: "#61dafb",  },
+      { name: "TailwindCSS", bg: "#38bdf8", },
+      { name: "TypeScript",  bg: "#3178c6", },
+      { name: "Vite",        bg: "#a855f7", },
+      { name: "Flask",       bg: "#94a3b8",  },
+      { name: "Python",      bg: "#3b82f6",  },
+    ],
+    delay: 1.9
+  },
+]
 
 
   return (
