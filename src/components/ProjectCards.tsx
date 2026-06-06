@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 import type { projectProp } from "../types/project";
 import { FaCss3Alt, FaDailymotion, FaHtml5, FaJs, FaMask, FaMix, FaPython, FaReact } from "react-icons/fa";
-import { SiFlask, SiHuggingface, SiLivewire, SiPanasonic, SiPytorch, SiSolidity, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+import { SiFlask, SiHuggingface, SiLivewire,  SiPytorch, SiSolidity, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 
 import { FiGithub, } from "react-icons/fi";
 
