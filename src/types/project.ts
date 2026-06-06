@@ -10,10 +10,12 @@ interface techStack {
 export interface projectProp {
     title: string,
     description: string,
-    tech : string[],
-    img?: string,
-    link: string
-    status: "ongoing" | "complete"  
+    tech : techStack[],
+    img?: string |React.ReactNode,
+    gitlink: string,
+    gitlink_?: string,
+    liveLink?: string,
+    status: "ongoing" | "complete"  | "live" | "future"
 
     delay?: number,
     top?:string,
