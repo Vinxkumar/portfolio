@@ -1,17 +1,17 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { FaGithub } from "react-icons/fa6";
+import { FaJava } from "react-icons/fa6";
 
-import blockchain from "../assets/BlockChain.png";
 import portfolio from "../assets/portfolio.png";
 import autoattend from "../assets/autoAttendance.png";
 import visionCaption from "../assets/visionCaption.png"
 import DocCare from "../assets/DocCare.png"
-// import docCare from "../assets/DocCare.png"
 
-
+import { motion } from "framer-motion";
 
 import type { projectProp } from "../types/project";
+import { FaCss3Alt, FaDailymotion, FaHtml5, FaJs, FaMask, FaMix, FaPython, FaReact } from "react-icons/fa";
+import { SiFlask, SiHuggingface, SiLivewire, SiPanasonic, SiPytorch, SiSolidity, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
+
+import { FiGithub, } from "react-icons/fi";
 
 const ProjectCard = () => {
   const projects: projectProp[] = [
@@ -28,11 +28,8 @@ const ProjectCard = () => {
         { name: "Remix",       bg: "#7c3aed", icon: <FaMix /> },
       ],
       status: "complete",
-      link: "http://github.com/Vinxkumar/Blockchain-Based-Voting-System",
-      img: blockchain,
-      // top: "0%",
-      // left: "0%",
-      // delay: 0.1,
+      gitlink: "http://github.com/Vinxkumar/Blockchain-Based-Voting-System",
+      delay: 0.5
     },
     {
       title: "Folio",
@@ -45,8 +42,9 @@ const ProjectCard = () => {
         {name:"FramerMotion" , bg: "yellow", icon:<FaDailymotion/>}
       ],
       status: "complete",
-      link: "https://github.com/Vinxkumar/portfolio",
+      gitlink: "https://github.com/Vinxkumar/portfolio",
       img: portfolio,
+      delay: 0.8
       // top: "0%",
       // left: "33.34%",
       // delay: 0.7,
@@ -123,64 +121,102 @@ const ProjectCard = () => {
 
   return (
     <>
-      <div className="gap-3 flex w-full h-full ">
-        <motion.div 
-            initial={{y:100, opacity:0}}
-            whileInView={{y:0, opacity:1}}
-            viewport={{once:true}}
-            transition={{
-                delay: 0.4, duration:0.5
-            }}
-        className="w-[30%] h-full p-4 bg-[#2c2c2c] border transition-normal ease-in  rounded-2xl border-[#3a3a3a]">
-          <div className="grid grid-cols-1 ">
-            {projects.map((project, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentProject(idx)}
-                className={`w-full cursor-pointer flex items-center h-12 border-b border-[#3a3a3a] transition-all ease-in-out text-[#eee8d8] hover:ml-[3%] hover:border-b-white hover:border-b-2 
-                ${currentProject == idx ? "ml-[3%] border-b-3 border-b-[#c05c40] " : ""}`}
-              >
-                {project.title}
-              </button>
-            ))}
-          </div>
-        </motion.div>
+      <div className="grid grid-cols-3  w-full relative">
+  {projects.map((project, idx) => (
+    <div key={idx}>
+      <motion.div 
+        initial={{y:50, opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        viewport={{once:true}}
+        transition={{ delay: project.delay, duration:0.5, ease:"easeInOut"}}
+        className={`
+          group relative
+          flex flex-col gap-2
+          border-gh-border
+          transition-all duration-300 ease-out
+          
+          p-4
+          hover:rounded-t-xl
+          hover:bg-gh-surface
+          hover:z-20
+          hover:-translate-y-2
+          hover:scale-105
+          hover:border-none
+          ${idx < 2 ? "border-b-2 border-r-2" : idx === 2 ? "border-b-2" : ""}
+          ${idx > 2 && idx !=5 ?  "border-r-2" : ""}
+        `}
+      >
 
-          </div>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-between ">          
+            <h1 className="text-3xl font-extrabold group-hover:animate-bounce text-transparent [-webkit-text-stroke:2px_#3fb950]">
+              {project.status==="future"? (
+                <span className="items-center ">{project.title}</span>
+              ): (
+                <span>{idx+1}</span>
+              ) }
+  
+           
+            </h1>
+            <div className="flex gap-1">
+             {project.gitlink && <a href={project.gitlink} className="flex cursor-pointer hover:translate-y-1 items-center bg-black text-white gap-1.5 text-xs px-3 py-1 hover:rounded-full border-gh-border transition-all duration-300"> <FiGithub/> GitHub </a>}
+             {project.gitlink_ && <a href={project.gitlink_} className="flex cursor-pointer hover:translate-y-1 items-center bg-black text-white gap-1.5 text-xs px-3 py-1 hover:rounded-full border-gh-border transition-all duration-300"> <FiGithub/> GitHub </a>}
+             {project.liveLink && <a href={project.liveLink} className="flex animate-pulse hover:translate-y-1 cursor-pointer items-center bg-yellow-300/30 border-yellow-300 border text-white gap-1.5 text-xs px-3 py-1 rounded-full border-gh-border transition-all duration-300"> <SiLivewire/> live </a>}
 
-          <div
-            className="absolute bottom-0 opacity-0 h-[50%] left-0 w-full z-10 bg-[#1e1e1e]/98 rounded-b-2xl p-6 flex flex-col gap-4
-  translate-z-full group-hover:translate-z-0 group-hover:opacity-100 transition-all duration-500 ease-in-out"
-          >
-            <div className="w-full p-4 rounded-2xl bg-[#2c2c2c] text-[#eee8d8] text-sm leading-relaxed">
-              {selected.description}
             </div>
 
-            <div className="flex flex-wrap gap-2">
-              {selected.tech.map((stack, idx) => (
-                <span
-                  key={idx}
-                  className="text-sm px-3 py-1 rounded-full bg-[#c05c40] text-white hover:scale-110"
-                >
-                  {stack}
-                </span>
-              ))}
-            </div>
+          </div>
 
-            {selected.link && (
-              <a
-                href={selected.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[#eee8d8] hover:text-[#e8805e] transition-colors w-fit"
-              >
-                <FaGithub size={18} />
-                View on GitHub
-              </a>
+          <span className="text-xl text-white">
+            {project.status === "future" ? (
+              <span></span>
+            ) : (
+              project.title
             )}
-          </div>
-        </motion.div>
-      </div>
+          </span>
+        </div>
+
+
+        <div className="flex flex-wrap gap-2">
+          {project.status !== "future" &&
+            project.tech.map((t, dx) => (
+              <span
+                key={dx}
+                style={{
+                  backgroundColor: t.bg,
+                  borderColor: t.bg + "33",
+                }}
+                className="flex items-center hover:translate-y-1 gap-1.5 text-xs cursor-auto px-3 py-1 rounded-full border transition-all duration-200"
+              >
+                {t.icon && (
+                  <span style={{ color: "white" }} className="text-sm">
+                    {t.icon}
+                  </span>
+                )}
+                <span style={{ color: "black" }}>{t.name}</span>
+              </span>
+            ))}
+        </div>
+
+        <div
+          className="
+            absolute left-0 right-0 top-full z-20
+            bg-gh-surface rounded-b-xl
+            px-4 py-3
+            opacity-0 group-hover:opacity-100
+            -translate-y-4 group-hover:translate-y-0
+            transition-all duration-400 ease-out
+            pointer-events-none group-hover:pointer-events-auto
+          "
+        >
+          <p className="text-sm text-zinc-400 p-2 bg-gh-bg rounded-xl leading-relaxed">
+            {project.description}
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  ))}
+</div>
     </>
   );
 };
