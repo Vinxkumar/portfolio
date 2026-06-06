@@ -20,4 +20,5 @@ export interface projectProp {
     delay?: number,
     top?:string,
     left?:string
+    border?: "t" | "b" | "l" | "r"
 }
