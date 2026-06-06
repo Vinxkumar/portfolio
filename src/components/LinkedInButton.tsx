@@ -7,7 +7,7 @@ const LinkedInButton = () => {
   href="https://www.linkedin.com/in/vinod-kumar-s-/" 
   target="_blank" 
   rel="noopener noreferrer"
-  className="w-full h-full flex items-center justify-center"
+  className="w-full h-full flex hover:text-[#0472ad]  items-center justify-center"
 >
   <LuLinkedin className="w-full h-full" />
 </a>

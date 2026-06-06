@@ -7,7 +7,7 @@ const MailButton = () => {
   href="vinxkumar178@gmail.com" 
   target="_blank" 
   rel="noopener noreferrer"
-  className="w-full h-full flex items-center justify-center"
+  className="w-full h-full hover:text-[#EA4335] flex items-center justify-center"
 >
   <BiLogoGmail className="w-full h-full" />
 </a>
