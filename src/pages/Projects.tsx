@@ -1,6 +1,5 @@
 import ProjectCard from "../components/ProjectCards"
-import { motion } from "framer-motion"
-import BlurText from "../components/ui/BlurText"
+
 
 const Projects = () => {
     return (
