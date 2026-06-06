@@ -120,25 +120,6 @@ const ProjectCard = () => {
           </div>
         </motion.div>
 
-        <motion.div 
-            initial={{y:100, opacity:0}}
-            whileInView={{y:0, opacity:1}}
-            transition={{
-                delay: 0.8, duration:0.5
-            }}
-            viewport={{once:true}}
-        className="relative group w-[70%] group flex  flex-col z-10 h-full p-4 bg-[#2c2c2c] rounded-2xl border border-[#3a3a3a]">
-          <h3 className="absolute top-[3%] text-[#c05c40] font-bold font-poppins text-2xl">
-            {selected.title}
-          </h3>
-          <div
-            className={`absolute w-full left-0  mt-[4.5%] rounded-b-2xl transition-all ease-in-out h-[85%] bg-amber-600`}
-          >
-            <img
-              src={selected.img}
-              alt={selected.title}
-              className="w-full h-full rounded-b-2xl"
-            />
           </div>
 
           <div
