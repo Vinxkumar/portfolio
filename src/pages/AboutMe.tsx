@@ -12,26 +12,18 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between bg-[#1e1e1e] w-screen h-screen "
+      className="relative flex items-center justify-between bg-gh- w-screen h-screen "
     >
-      <div className="relative flex items-center rounded-3xl justify-between px-16 z-10 bg-[#eee8d8] w-full h-full">
-      {/* <div className="absolute left-4 top-18 flex flex-col items-start w-36">
-        <BlurText
-          text="AboutMe"
-          delay={500}
-          animateBy="words"
-          direction="top"
-          className="font-poppins text-3xl font-bold text-[#c05c40]"
-        />
-        <motion.div
-          initial={{ scaleX: 0, opacity: 1 }}
-          whileInView={{ scaleX: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.9 }}
-          className="absolute -bottom-1 h-0.5 w-full origin-left rounded-full bg-[#c05c40]"
-        />
-      </div> */}
+<div
+  className="
+    absolute inset-0 z-2 w-full h-full
+    bg-[linear-gradient(rgba(22,163,74,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(22,163,74,0.12)_1px,transparent_1px)]
+    bg-[size:32px_32px]
+  "
+/>
+      <div className="relative flex items-center rounded-2xl justify-between px-16 z-10  w-full h-full">
 
+      
       <div className=" flex flex-col mt-[5%] h-4/5  items-start justify-center gap-5 w-2/5">
         <TextType
           text={["Vinod Kumar S"]}
