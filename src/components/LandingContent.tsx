@@ -21,11 +21,11 @@ const LandingPage = () => {
               delay: 1.1,
               duration: 0.5,
             }}
-            className="mt-9 ml-8 h-0.5 w-18 rounded-full left-0 bottom-1 bg-[#c05c40] "
+            className="mt-9 ml-8 h-0.5 w-12 rounded-full left-0 bottom-1 bg-gh-accent "
           />
 
 
-          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-[#c05c40]">
+          <span className="mt-5    ml-4 bottom-1 font-mono text-xl font-bold font-dm text-gh-accent">
             <BlurText
               text="FULL STACK DEVELOPER"
               delay={200}
@@ -41,7 +41,7 @@ const LandingPage = () => {
           <div className="">
             <SplitText
               text="Building things"
-              className=" text-center selection:text-[#c05c40] selection:bg-[#eee8d8]"
+              className=" text-center  text-gh-surface/80 "
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -57,7 +57,7 @@ const LandingPage = () => {
           <div className="m-2 gap-6 flex">
             <SplitText
               text="that"
-              className=" text-center selection:text-[#c05c40] selection:bg-[#eee8d8]"
+              className=" text-center  text-gh-surface/80 "
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -71,7 +71,7 @@ const LandingPage = () => {
             />
             <SplitText
               text=" Actually"
-              className=" text-center  text-[#c05c40] selection:text-[#eee8d8] selection:bg-[#c05c40]"
+              className=" text-center  text-gh-accent-2"
               startDelay={1}
               delay={100}
               duration={1.25}
@@ -97,7 +97,7 @@ const LandingPage = () => {
       rotationInterval={2000}
       auto
       loop
-      className="bg-[#c05c40] transition-transform ease-in-out rounded-2xl translate-x-1 selection:text-[#c05c40] selection:bg-[#eee8d8]"
+      className=" transition-transform ease-in-out rounded-2xl translate-x-1 text-gh-surface"
     />
   </motion.div>
           </div>
