@@ -12,8 +12,9 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between bg-gh- w-screen h-screen "
+      className="relative flex items-center justify-between  w-screen h-screen "
     >
+      <span className="absolute top-1/2 left-0 text-sm text-gh-muted rotate-270"> ABOUT ME</span>
 <div
   className="
     absolute inset-0 z-2 w-full h-full
