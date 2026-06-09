@@ -5,14 +5,14 @@ import ResumeButton from "../components/ResumeButton";
 import TextType from "../components/ui/TextType";
 import { motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
-import FrontendSkills from "../components/FrontendSkills";
+import FrontendSkills from "../components/AboutMeSkills";
 import profilePic from "../assets/profilepic.png";
 import CountUp from "../components/CountUp";
 const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between  w-screen h-screen "
+      className="relative flex items-center justify-between  w-screen h-screen  rounded-xl"
     >
       <span className="absolute top-1/2 left-0 text-sm text-gh-muted rotate-270"> ABOUT ME</span>
 <div
