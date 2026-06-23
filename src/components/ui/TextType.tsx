@@ -1,6 +1,6 @@
 'use client';
 
-import { type ElementType, useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
+import React, { type ElementType, useEffect, useRef, useState, createElement, useMemo, useCallback } from 'react';
 import { gsap } from 'gsap';
 
 interface TextTypeProps {
@@ -10,7 +10,7 @@ interface TextTypeProps {
   cursorCharacter?: string | React.ReactNode;
   cursorBlinkDuration?: number;
   cursorClassName?: string;
-  text: string | string[];
+  text: string | string[] | React.ReactNode;
   as?: ElementType;
   typingSpeed?: number;
   initialDelay?: number;

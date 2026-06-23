@@ -5,15 +5,16 @@ import ResumeButton from "../components/ResumeButton";
 import TextType from "../components/ui/TextType";
 import { motion } from "framer-motion";
 import SplitText from "../components/ui/SplitText";
-import FrontendSkills from "../components/FrontendSkills";
+import FrontendSkills from "../components/AboutMeSkills";
 import profilePic from "../assets/profilepic.png";
 import CountUp from "../components/CountUp";
 const AboutMe = () => {
   return (
     <div
       id="about"
-      className="relative flex items-center justify-between bg-gh- w-screen h-screen "
+      className="relative flex items-center justify-between  w-screen h-screen bg-gh-surface "
     >
+      <span className="absolute top-1/2 left-0 text-sm text-gh-muted rotate-270"> ABOUT ME</span>
 <div
   className="
     absolute inset-0 z-2 w-full h-full
@@ -36,7 +37,7 @@ const AboutMe = () => {
           deletingSpeed={0}
           cursorBlinkDuration={0.5}
           startOnVisible
-          className="font-poppins font-bold text-gh-accent-3 text-5xl"
+          className="font-poppins font-bold text-gh-accent text-5xl"
         />
 
         <SplitText
@@ -55,7 +56,7 @@ const AboutMe = () => {
 
         <SplitText
           text="Software Engineer"
-          className="text-xl font-semibold font-poppins text-[#052e16]"
+          className="text-xl font-semibold font-poppins text-gh-accent"
           delay={50}
           duration={1.25}
           ease="power3.out"
@@ -74,7 +75,7 @@ const AboutMe = () => {
             delay: 0.8,
             duration: 0.8,
           }}
-          className="bg-[#dcfce7] p-4 text-[#052e16] border h-1/2 rounded-2xl w-[70%]"
+          className=" p-4  bg-[#0f1a0f]  border-[#1e3020] text-[#8b9ca0] border h-1/2 rounded-2xl w-[70%]"
         >
           I'm a final-year BCA student at New Horizon College passionate about
           building clean, scalable software. I enjoy working across the full
@@ -91,7 +92,7 @@ const AboutMe = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 + i * 0.2, duration: 0.5 }}
-              className="cursor-pointer w-8 transition-all hover:-translate-y-1 text-gh-accent-3"
+              className="cursor-pointer w-8 transition-all hover:-translate-y-1 text-gh-accent"
             >
               <Btn />
             </motion.div>
@@ -147,7 +148,7 @@ const AboutMe = () => {
           <span>+</span>
           <CountUp from={0} to={stat.count} direction="up" duration={0.1} delay={1} className="count-up-text" />
         </div>
-        <span>{stat.label}</span>
+        <span className="text-gh-accent" >{stat.label}</span>
       </motion.div>
     ))}
 
