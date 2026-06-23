@@ -4,6 +4,7 @@ import PageLoader from "./pages/PageLoader";
 import { useState, useEffect } from "react";
 import AboutMe from "./pages/AboutMe";
 import "./App.css";
+import ContactMe from "./pages/ContactMe";
 
 // import Background from "./pages/BackgroundTesting";
 
@@ -40,6 +41,7 @@ function App() {
 
                 <Patents />
                 <Skills/>
+                <ContactMe/>
               </main>
             </Suspense>
           }
