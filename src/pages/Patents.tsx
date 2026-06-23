@@ -116,7 +116,7 @@ useEffect(() => {
     <div
       id="research-works"
       ref={sectionRef}
-      className="relative z-10 w-screen min-h-[140vh] bg-gh-border"
+      className="relative z-10 w-screen min-h-[140vh] bg-gh-surface"
     > <span className="absolute top-1/2 left-0 text-sm text-gh-muted uppercase rotate-270">patents</span>
 
       <svg
